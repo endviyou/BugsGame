@@ -133,6 +133,32 @@
             android:layout_marginBottom="16dp" />
 
 
+        <!-- Кнопка сохранения -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить данные"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- Результат -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="@android:drawable/editbox_background"
+            android:textSize="14sp"
+            android:text="Заполните форму и нажмите Сохранить"/>
+
+        <!-- ЗЗ -->
+        <ImageView
+            android:id="@+id/ivZodiac"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="ЗЗ"
+            />
     </LinearLayout>
 </ScrollView>
