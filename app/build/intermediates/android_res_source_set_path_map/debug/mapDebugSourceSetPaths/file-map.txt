@@ -1,0 +1,8 @@
+com.endviyou.bugs.app-pngs-0 /Users/endviyou/Desktop/study/bugs/app/build/generated/res/pngs/debug
+com.endviyou.bugs.app-updated_navigation_xml-1 /Users/endviyou/Desktop/study/bugs/app/build/generated/updated_navigation_xml/debug
+com.endviyou.bugs.app-packageDebugResources-2 /Users/endviyou/Desktop/study/bugs/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.endviyou.bugs.app-packageDebugResources-3 /Users/endviyou/Desktop/study/bugs/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.endviyou.bugs.app-debug-4 /Users/endviyou/Desktop/study/bugs/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.endviyou.bugs.app-debug-5 /Users/endviyou/Desktop/study/bugs/app/src/debug/res
+com.endviyou.bugs.app-main-6 /Users/endviyou/Desktop/study/bugs/app/src/main/res
+gradleHome-0 /Users/endviyou/.gradle
