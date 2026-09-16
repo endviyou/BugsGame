@@ -26,9 +26,15 @@ id rbMale
 id rgGender
 id seekBarDifficulty
 id spinnerCourse
+id tabLayout
 id tvDifficultyValue
 id tvResult
+id viewPager
 layout activity_main
+layout fragment_authors
+layout fragment_registration
+layout fragment_rules
+layout fragment_settings
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
