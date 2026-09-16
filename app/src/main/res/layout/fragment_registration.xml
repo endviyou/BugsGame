@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:fitsSystemWindows="true"
+    android:background="@drawable/orange_bubbles_bg"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -140,7 +141,10 @@
             android:layout_height="wrap_content"
             android:text="Сохранить данные"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#ff9800"
+            android:textColor="@color/black"/>
+
 
         <!-- Результат -->
         <TextView

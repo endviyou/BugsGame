@@ -5,6 +5,7 @@ int color tab_indicator_white 0x0
 int color tab_text_light 0x0
 int color white 0x0
 int drawable bl 0x0
+int drawable blue_bubbles_bg 0x0
 int drawable cat 0x0
 int drawable circle_photo_mask 0x0
 int drawable circle_pink_bg 0x0
@@ -13,6 +14,7 @@ int drawable ic_launcher_background 0x0
 int drawable ic_launcher_foreground 0x0
 int drawable kozerog 0x0
 int drawable leo 0x0
+int drawable orange_bubbles_bg 0x0
 int drawable oven 0x0
 int drawable pink_bubbles_bg 0x0
 int drawable rak 0x0
@@ -24,6 +26,7 @@ int drawable vesy 0x0
 int drawable vodoley 0x0
 int drawable vs 0x0
 int id btnSave 0x0
+int id btnSaveSettings 0x0
 int id calendarView 0x0
 int id etFullName 0x0
 int id ivAuthorPhoto 0x0
@@ -32,12 +35,20 @@ int id lvAuthors 0x0
 int id rbFemale 0x0
 int id rbMale 0x0
 int id rgGender 0x0
+int id seekBarBonusInterval 0x0
 int id seekBarDifficulty 0x0
+int id seekBarMaxBugs 0x0
+int id seekBarRoundDuration 0x0
+int id seekBarSpeed 0x0
 int id spinnerCourse 0x0
 int id tabLayout 0x0
 int id tvAuthorName 0x0
+int id tvBonusIntervalValue 0x0
 int id tvDifficultyValue 0x0
+int id tvMaxBugsValue 0x0
 int id tvResult 0x0
+int id tvRoundDurationValue 0x0
+int id tvSpeedValue 0x0
 int id viewPager 0x0
 int id webViewRules 0x0
 int layout activity_main 0x0

@@ -7,6 +7,7 @@ color tab_indicator_white
 color tab_text_light
 color white
 drawable bl
+drawable blue_bubbles_bg
 drawable cat
 drawable circle_photo_mask
 drawable circle_pink_bg
@@ -15,6 +16,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable kozerog
 drawable leo
+drawable orange_bubbles_bg
 drawable oven
 drawable pink_bubbles_bg
 drawable rak
@@ -26,6 +28,7 @@ drawable vesy
 drawable vodoley
 drawable vs
 id btnSave
+id btnSaveSettings
 id calendarView
 id etFullName
 id ivAuthorPhoto
@@ -34,12 +37,20 @@ id lvAuthors
 id rbFemale
 id rbMale
 id rgGender
+id seekBarBonusInterval
 id seekBarDifficulty
+id seekBarMaxBugs
+id seekBarRoundDuration
+id seekBarSpeed
 id spinnerCourse
 id tabLayout
 id tvAuthorName
+id tvBonusIntervalValue
 id tvDifficultyValue
+id tvMaxBugsValue
 id tvResult
+id tvRoundDurationValue
+id tvSpeedValue
 id viewPager
 id webViewRules
 layout activity_main

@@ -1,13 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/blue_bubbles_bg"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Настройки (пока заглушка)"
-        android:textSize="18sp" />
-</LinearLayout>
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Настройки игры️"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#006064"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#b2ebf2"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 1. Скорость игры -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Скорость игры"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#006064"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvSpeedValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textSize="16sp"
+            android:textColor="#00838f"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9"
+            android:progress="4"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 2. Максимальное количество тараканов -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Максимум тараканов"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#006064"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvMaxBugsValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="16sp"
+            android:textColor="#00838f"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarMaxBugs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="19"
+            android:progress="9"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 3. Интервал появления бонусов -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Интервал бонусов (сек)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#006064"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvBonusIntervalValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 сек"
+            android:textSize="16sp"
+            android:textColor="#00838f"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarBonusInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="29"
+            android:progress="9"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 4. Длительность раунда -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Длительность раунда (сек)"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#006064"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvRoundDurationValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="60 сек"
+            android:textSize="16sp"
+            android:textColor="#00838f"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <SeekBar
+            android:id="@+id/seekBarRoundDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="150"
+            android:progress="30"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Кнопка сохранения -->
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить настройки"
+            android:backgroundTint="#00838f"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

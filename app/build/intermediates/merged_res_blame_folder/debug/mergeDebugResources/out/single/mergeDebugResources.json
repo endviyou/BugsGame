@@ -16,12 +16,12 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/layout_fragment_authors.xml.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/layout/fragment_authors.xml"
+    },
+    {
+        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/xml_backup_rules.xml.flat",
@@ -34,10 +34,6 @@
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.endviyou.bugs.app-debug-37:/layout_activity_main.xml.flat",
-        "source": "com.endviyou.bugs.app-main-39:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_vs.png.flat",
@@ -80,8 +76,16 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/cat.png"
     },
     {
+        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_orange_bubbles_bg.xml.flat",
+        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/orange_bubbles_bg.xml"
+    },
+    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/mipmap-mdpi_ic_launcher.webp.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.endviyou.bugs.app-debug-37:/layout_fragment_registration.xml.flat",
+        "source": "com.endviyou.bugs.app-main-39:/layout/fragment_registration.xml"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_circle_pink_bg.xml.flat",
@@ -124,12 +128,12 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_bl.png.flat",
-        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/bl.png"
-    },
-    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/layout_fragment_settings.xml.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_bl.png.flat",
+        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/bl.png"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_str.png.flat",
@@ -140,6 +144,10 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/mipmap-hdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_blue_bubbles_bg.xml.flat",
+        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/blue_bubbles_bg.xml"
+    },
+    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_leo.png.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/leo.png"
     },
@@ -148,15 +156,15 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/deva.png"
     },
     {
+        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/layout_fragment_registration.xml.flat",
+        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/layout/fragment_registration.xml"
+    },
+    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_circle_photo_mask.xml.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/circle_photo_mask.xml"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/drawable_rak.png.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/drawable/rak.png"
-    },
-    {
-        "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-37:/layout_fragment_registration.xml.flat",
-        "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-39:/layout/fragment_registration.xml"
     }
 ]
