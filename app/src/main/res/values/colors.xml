@@ -2,4 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tab_bar_black">#1a1a1a</color>
+    <color name="tab_text_light">#e0e0e0</color>
+    <color name="tab_indicator_white">#ffffff</color>
 </resources>

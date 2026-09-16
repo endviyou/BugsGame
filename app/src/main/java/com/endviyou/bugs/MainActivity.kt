@@ -8,6 +8,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.endviyou.bugs.fragments.*
 import com.google.android.material.tabs.TabLayout
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tabLayout: TabLayout
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)
