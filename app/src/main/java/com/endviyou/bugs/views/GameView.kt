@@ -132,16 +132,19 @@ class GameView @JvmOverloads constructor(
                 darkColor = Color.rgb(80, 50, 20)
                 accentColor = Color.rgb(60, 35, 15)
             }
+
             BugType.FAST -> {
                 bodyColor = Color.rgb(255, 140, 0)
                 darkColor = Color.rgb(180, 90, 0)
                 accentColor = Color.rgb(120, 60, 0)
             }
+
             BugType.BONUS -> {
                 bodyColor = Color.rgb(255, 215, 0)
                 darkColor = Color.rgb(200, 160, 0)
                 accentColor = Color.rgb(150, 120, 0)
             }
+
             BugType.POISON -> {
                 bodyColor = Color.rgb(120, 40, 160)
                 darkColor = Color.rgb(75, 0, 130)
@@ -249,8 +252,18 @@ class GameView @JvmOverloads constructor(
 
         // Кружки на концах усиков
         paint.style = Paint.Style.FILL
-        canvas.drawCircle(bug.x - size * 0.5f + antennaWiggle, bug.y - size * 1.7f, size * 0.1f, paint)
-        canvas.drawCircle(bug.x + size * 0.5f - antennaWiggle, bug.y - size * 1.7f, size * 0.1f, paint)
+        canvas.drawCircle(
+            bug.x - size * 0.5f + antennaWiggle,
+            bug.y - size * 1.7f,
+            size * 0.1f,
+            paint
+        )
+        canvas.drawCircle(
+            bug.x + size * 0.5f - antennaWiggle,
+            bug.y - size * 1.7f,
+            size * 0.1f,
+            paint
+        )
 
         paint.style = Paint.Style.FILL
     }
@@ -376,8 +389,29 @@ class GameView @JvmOverloads constructor(
     /**
      * Применение настроек
      */
+    /**
+     * Применение настроек
+     */
     fun applySettings(speed: Int, maxBugsCount: Int) {
         this.speedMultiplier = speed / 5f
         this.maxBugs = maxBugsCount
+
+        // Обновляем скорость у всех жуков
+        bugs.forEach { bug ->
+            val baseSpeed = when (bug.type) {
+                BugType.NORMAL -> 3f
+                BugType.FAST -> 7f
+                BugType.BONUS -> 4f
+                BugType.POISON -> 2f
+            }
+            val newSpeed = baseSpeed * speedMultiplier
+            // Нормализуем текущую скорость
+            val currentSpeed =
+                Math.sqrt((bug.speedX * bug.speedX + bug.speedY * bug.speedY).toDouble()).toFloat()
+            if (currentSpeed > 0) {
+                bug.speedX = bug.speedX / currentSpeed * newSpeed
+                bug.speedY = bug.speedY / currentSpeed * newSpeed
+            }
+        }
     }
 }

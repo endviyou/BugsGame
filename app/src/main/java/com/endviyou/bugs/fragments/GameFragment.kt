@@ -40,15 +40,13 @@ class GameFragment : Fragment() {
         tvTimer = view.findViewById(R.id.tvTimer)
         btnStartStop = view.findViewById(R.id.btnStartStop)
 
-        // Загружаем настройки из SharedPreferences
+        // Первая загрузка настроек
         loadSettings()
 
-        // Слушатель изменения счёта
         gameView.onScoreChanged = { score ->
             tvScore.text = "Очки: $score"
         }
 
-        // Кнопка старт/стоп
         btnStartStop.setOnClickListener {
             if (isGameRunning) {
                 stopGame()
@@ -59,8 +57,17 @@ class GameFragment : Fragment() {
     }
 
     /**
-     * Загрузка настроек из SharedPreferences
+     * ВАЖНО: Вызывается каждый раз, когда вкладка становится видимой
+     * Здесь перечитываем настройки!
      */
+    override fun onResume() {
+        super.onResume()
+        // Перечитываем настройки каждый раз при показе вкладки
+        if (::gameView.isInitialized) {
+            loadSettings()
+        }
+    }
+
     private fun loadSettings() {
         val prefs = requireContext().getSharedPreferences("game_settings", Context.MODE_PRIVATE)
         val speed = prefs.getInt("speed", 5)
@@ -71,15 +78,11 @@ class GameFragment : Fragment() {
         tvTimer.text = "⏱ $roundDuration"
     }
 
-    /**
-     * Запуск игры + таймер
-     */
     private fun startGame() {
         isGameRunning = true
         btnStartStop.text = "Стоп"
         gameView.startGame()
 
-        // Запускаем таймер
         countDownTimer = object : CountDownTimer(roundDuration * 1000L, 1000L) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = millisUntilFinished / 1000
@@ -97,9 +100,6 @@ class GameFragment : Fragment() {
         }.start()
     }
 
-    /**
-     * Остановка игры
-     */
     private fun stopGame() {
         isGameRunning = false
         btnStartStop.text = "Старт"

@@ -14,7 +14,11 @@
                 radial-gradient(circle at 20% 30%, #1a4d2e 8px, transparent 9px),
                 radial-gradient(circle at 70% 15%, #1a4d2e 6px, transparent 7px),
                 radial-gradient(circle at 45% 60%, #1a4d2e 10px, transparent 11px),
-                radial-gradient(circle at 85% 75%, #1a4d2e 7px, transparent 8px);
+                radial-gradient(circle at 85% 75%, #1a4d2e 7px, transparent 8px),
+                radial-gradient(circle at 10% 80%, #1a4d2e 5px, transparent 6px),
+                radial-gradient(circle at 60% 90%, #1a4d2e 9px, transparent 10px),
+                radial-gradient(circle at 30% 10%, #1a4d2e 4px, transparent 5px),
+                radial-gradient(circle at 90% 40%, #1a4d2e 6px, transparent 7px);
             background-size: 200px 200px;
             background-attachment: fixed;
             color: #d4f5d4;
@@ -27,28 +31,77 @@
             border-radius: 20px;
             border: 3px solid #2d7a4f;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            text-align: center;
         }
 
         h1 {
             color: #7dd87d;
-            font-size: 28px;
+            text-align: center;
+            font-size: 26px;
             border-bottom: 4px dashed #2d7a4f;
             padding-bottom: 12px;
             margin-bottom: 20px;
         }
 
-        .placeholder {
-            font-size: 18px;
+        h2 {
             color: #a8e6a8;
-            margin-top: 40px;
+            font-size: 19px;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 15px;
+            color: #d4f5d4;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #c8e6c8;
+        }
+
+        .highlight {
+            background-color: rgba(45, 122, 79, 0.3);
+            padding: 12px 16px;
+            border-left: 5px solid #7dd87d;
+            border-radius: 8px;
+            margin: 12px 0;
+        }
+
+        .bug-card {
+            display: block;
+            background-color: rgba(45, 122, 79, 0.2);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin: 8px 0;
+            border-left: 4px solid;
+        }
+
+        .bug-normal { border-color: #8b5a2b; }
+        .bug-fast { border-color: #ff8c00; }
+        .bug-bonus { border-color: #ffd700; }
+        .bug-poison { border-color: #7834a0; }
+
+        .emoji {
+            font-size: 18px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 32px;
+            color: #7dd87d;
             font-style: italic;
         }
 
-        .emoji {
-            font-size: 48px;
-            display: block;
-            margin: 20px 0;
+        .rule-number {
+            color: #7dd87d;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,12 +109,70 @@
 
 <div class="container">
 
-    <h1>Правила игры "Жуки"</h1>
+    <h1>Правила игры</h1>
 
-    <p class="placeholder">
-        Делай как надо.<br>
-        Как не надо не делай.<br>
+    <h2>Цель игры</h2>
+    <p>
+        Набрать как можно больше очков за <strong>ограниченное время раунда</strong>,
+        ловя жуков и избегая ядовитых насекомых.
     </p>
+
+    <h2>Как играть</h2>
+    <ul>
+        <li><span class="rule-number">1.</span> Нажмите кнопку <strong>"Старт"</strong> — начнётся раунд</li>
+        <li><span class="rule-number">2.</span> Жуки бегают по экрану в случайных направлениях</li>
+        <li><span class="rule-number">3.</span> <strong>Нажмите на жука </strong>, чтобы его поймать</li>
+        <li><span class="rule-number">4.</span> За попадание вы получаете очки, за промах — штраф</li>
+        <li><span class="rule-number">5.</span> Игра заканчивается, когда истекает таймер</li>
+    </ul>
+
+    <h2>Типы жуков</h2>
+
+    <div class="bug-card bug-normal">
+        <span class="emoji"></span> <strong>Обычный жук</strong> : <strong>+10 очков</strong><br>
+        <small>Средняя скорость, коричневый цвет</small>
+    </div>
+
+    <div class="bug-card bug-fast">
+        <span class="emoji"></span> <strong>Быстрый жук</strong> : <strong>+25 очков</strong><br>
+        <small>Двигается очень быстро, оранжевый цвет</small>
+    </div>
+
+    <div class="bug-card bug-bonus">
+        <span class="emoji"></span> <strong>Бонусный жук</strong> : <strong>+50 очков</strong><br>
+        <small>Редкий, золотой цвет. Ловите в первую очередь!</small>
+    </div>
+
+    <div class="bug-card bug-poison">
+        <span class="emoji"></span> <strong>Ядовитый жук</strong> : <strong>−20 очков</strong><br>
+        <small>Фиолетовый цвет. Не трогайте его!</small>
+    </div>
+
+    <h2>Штрафы</h2>
+    <div class="highlight">
+        <p>
+            <strong>Промах</strong> (тап по пустому месту) : <strong>−5 очков</strong>.<br>
+            <strong>Попадание в ядовитого жука</strong> : <strong>−20 очков</strong>.
+        </p>
+        <p>Будьте внимательны и не спешите!</p>
+    </div>
+
+    <h2>Настройки игры</h2>
+    <p>Перед началом раунда можно настроить:</p>
+    <ul>
+        <li><strong>Скорость игры</strong> : от 1 до 10</li>
+        <li><strong>Максимум тараканов</strong> : от 1 до 20</li>
+        <li><strong>Интервал бонусов</strong> : от 1 до 30 секунд</li>
+        <li><strong>Длительность раунда</strong> : от 30 до 180 секунд</li>
+    </ul>
+
+    <h2>Победа</h2>
+    <p>
+        Игра заканчивается, когда истекает время раунда. Ваш результат
+        <strong>сохраняется в таблице лидеров</strong> (появится в следующих патчах).
+    </p>
+
+    <p class="footer">Удачи и веселой игры!</p>
 
 </div>
 
