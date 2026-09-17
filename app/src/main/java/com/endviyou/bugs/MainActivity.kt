@@ -8,7 +8,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.endviyou.bugs.fragments.*
 import com.google.android.material.tabs.TabLayout
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var tabLayout: TabLayout
@@ -17,7 +16,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewPager)
@@ -39,23 +37,26 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        // Добавляем вкладки в новом порядке
         tabLayout.addTab(tabLayout.newTab().setText("Регистрация"))
         tabLayout.addTab(tabLayout.newTab().setText("Правила"))
-        tabLayout.addTab(tabLayout.newTab().setText("Авторы"))
         tabLayout.addTab(tabLayout.newTab().setText("Настройки"))
+        tabLayout.addTab(tabLayout.newTab().setText("Игра"))
+        tabLayout.addTab(tabLayout.newTab().setText("Авторы"))
     }
 }
 
 class TabsAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 
-    override fun getItemCount(): Int = 4
+    override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> RegistrationFragment()
-            1 -> RulesFragment()
-            2 -> AuthorsFragment()
-            3 -> SettingsFragment()
+            0 -> RegistrationFragment()   // Регистрация (открывается первой)
+            1 -> RulesFragment()          // Правила
+            2 -> SettingsFragment()       // Настройки
+            3 -> GameFragment()           // Игра
+            4 -> AuthorsFragment()        // Авторы
             else -> RegistrationFragment()
         }
     }

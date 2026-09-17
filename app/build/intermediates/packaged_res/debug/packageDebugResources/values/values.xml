@@ -18,5 +18,8 @@
         
         
     </style>
+    <style name="MyTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">8sp</item>
+    </style>
     <style name="Theme.Bugs" parent="Base.Theme.Bugs"/>
 </resources>

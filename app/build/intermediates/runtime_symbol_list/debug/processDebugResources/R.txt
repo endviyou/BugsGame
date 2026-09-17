@@ -3199,6 +3199,7 @@ int id bounceEnd 0x7f090060
 int id bounceStart 0x7f090061
 int id btnSave 0x7f090062
 int id btnSaveSettings 0x7f090201
+int id btnStartStop 0x7f09020a
 int id buttonPanel 0x7f090063
 int id cache_measures 0x7f090064
 int id calendarView 0x7f090065
@@ -3301,6 +3302,7 @@ int id forever 0x7f0900c5
 int id fragment_container_view_tag 0x7f0900c6
 int id frost 0x7f0900c7
 int id fullscreen_header 0x7f0900c8
+int id gameView 0x7f09020b
 int id ghost_view 0x7f0900c9
 int id ghost_view_holder 0x7f0900ca
 int id gone 0x7f0900cb
@@ -3595,7 +3597,9 @@ int id tvDifficultyValue 0x7f0901e3
 int id tvMaxBugsValue 0x7f090207
 int id tvResult 0x7f0901e4
 int id tvRoundDurationValue 0x7f090208
+int id tvScore 0x7f09020c
 int id tvSpeedValue 0x7f090209
+int id tvTimer 0x7f09020d
 int id unchecked 0x7f0901e5
 int id uniform 0x7f0901e6
 int id unlabeled 0x7f0901e7
@@ -3753,6 +3757,7 @@ int layout design_navigation_menu_item 0x7f0c002a
 int layout design_text_input_end_icon 0x7f0c002b
 int layout design_text_input_start_icon 0x7f0c002c
 int layout fragment_authors 0x7f0c002d
+int layout fragment_game 0x7f0c006f
 int layout fragment_registration 0x7f0c002e
 int layout fragment_rules 0x7f0c002f
 int layout fragment_settings 0x7f0c0030
@@ -4299,6 +4304,7 @@ int style MaterialAlertDialog_MaterialComponents_Title_Panel 0x7f110133
 int style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked 0x7f110134
 int style MaterialAlertDialog_MaterialComponents_Title_Text 0x7f110135
 int style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked 0x7f110136
+int style MyTabText 0x7f11045e
 int style Platform_AppCompat 0x7f110137
 int style Platform_AppCompat_Light 0x7f110138
 int style Platform_MaterialComponents 0x7f110139

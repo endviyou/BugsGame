@@ -28,8 +28,10 @@ drawable vodoley
 drawable vs
 id btnSave
 id btnSaveSettings
+id btnStartStop
 id calendarView
 id etFullName
+id gameView
 id ivAuthorPhoto
 id ivZodiac
 id lvAuthors
@@ -49,11 +51,14 @@ id tvDifficultyValue
 id tvMaxBugsValue
 id tvResult
 id tvRoundDurationValue
+id tvScore
 id tvSpeedValue
+id tvTimer
 id viewPager
 id webViewRules
 layout activity_main
 layout fragment_authors
+layout fragment_game
 layout fragment_registration
 layout fragment_rules
 layout fragment_settings
@@ -62,6 +67,7 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
 style Base_Theme_Bugs
+style MyTabText
 style Theme_Bugs
 xml backup_rules
 xml data_extraction_rules
