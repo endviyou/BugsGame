@@ -71,6 +71,7 @@ int layout item_author 0x0
 int layout item_record 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
+int raw bug_scream 0x0
 int string app_name 0x0
 int style Base_Theme_Bugs 0x0
 int style MyTabText 0x0

@@ -72,6 +72,7 @@ layout item_author
 layout item_record
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw bug_scream
 string app_name
 style Base_Theme_Bugs
 style MyTabText

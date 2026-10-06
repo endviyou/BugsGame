@@ -4,52 +4,112 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
+import android.media.AudioAttributes
+import android.media.SoundPool
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import com.endviyou.bugs.R
 import com.endviyou.bugs.models.Bug
 import com.endviyou.bugs.models.BugType
 import kotlin.random.Random
 
 /**
  * Кастомная View — игровое поле
- * Рисует нарисованных жуков, обрабатывает нажатия, показывает всплывающие очки
+ * Рисует жуков, обрабатывает нажатия, показывает всплывающие очки,
+ * поддерживает акселерометр (гравитацию) и звук
  */
 class GameView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr) {
+) : View(context, attrs, defStyleAttr), SensorEventListener {
 
-    // Список насекомых
+    // ===== ИГРОВЫЕ ОБЪЕКТЫ =====
     private val bugs = mutableListOf<Bug>()
-
-    // Список всплывающих текстов
     private val popups = mutableListOf<PopupText>()
-
-    // Paint для рисования
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
 
-    // Игровой цикл
+    // ===== ИГРОВОЙ ЦИКЛ =====
     private val handler = Handler(Looper.getMainLooper())
     private var isRunning = false
-
-    // Настройки
     private var maxBugs = 10
     private var speedMultiplier = 1f
 
-    // Очки
+    // ===== ОЧКИ =====
     var score = 0
         private set
-
-    // Слушатель изменения счёта
     var onScoreChanged: ((Int) -> Unit)? = null
 
-    /**
-     * Класс для всплывающего текста (+10, -5)
-     */
+    // ===== ГРАВИТАЦИЯ (акселерометр) =====
+    private lateinit var sensorManager: SensorManager
+    private var accelerometer: Sensor? = null
+    private var gravityX = 0f
+    private var gravityY = 0f
+    private var gravityModeEnabled = false
+    private var gravityTimer = 0
+
+    // ===== БОНУС =====
+    private var bonusX = 0f
+    private var bonusY = 0f
+    private val bonusSize = 60f
+    private var bonusVisible = false
+    private var bonusTimer = 0
+    private val bonusIntervalFrames = 15 * 60   // 15 сек × 60 FPS
+    private val gravityDurationFrames = 5 * 60  // 5 секунд
+
+    // ===== ЗВУК =====
+    private lateinit var soundPool: SoundPool
+    private var screamSoundId = 0
+
+    init {
+        // Инициализация сенсора
+        sensorManager = context.getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+
+        // Инициализация SoundPool
+        val audioAttrs = AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_GAME)
+            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+            .build()
+        soundPool = SoundPool.Builder()
+            .setMaxStreams(3)
+            .setAudioAttributes(audioAttrs)
+            .build()
+        screamSoundId = soundPool.load(context, R.raw.bug_scream, 1)
+    }
+
+    // ===== SENSOR =====
+
+    override fun onSensorChanged(event: SensorEvent?) {
+        if (event?.sensor?.type == Sensor.TYPE_ACCELEROMETER) {
+            gravityX = -event.values[0]
+            gravityY = event.values[1]
+        }
+    }
+
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        accelerometer?.let {
+            sensorManager.registerListener(this, it, SensorManager.SENSOR_DELAY_GAME)
+        }
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        sensorManager.unregisterListener(this)
+    }
+
+    // ===== POPUP =====
+
     private data class PopupText(
         val x: Float,
         val y: Float,
@@ -59,30 +119,51 @@ class GameView @JvmOverloads constructor(
         var offsetY: Float = 0f
     )
 
-    /**
-     * Игровой цикл — обновляет и перерисовывает
-     */
+    // ===== ИГРОВОЙ ЦИКЛ =====
+
     private val gameLoop = object : Runnable {
         override fun run() {
             if (isRunning) {
                 updateBugs()
-                invalidate()  // Перерисовать
-                handler.postDelayed(this, 16)  // ~60 FPS
+                invalidate()
+                handler.postDelayed(this, 16)
             }
         }
     }
 
-    /**
-     * Обновление позиций насекомых и всплывающих текстов
-     */
     private fun updateBugs() {
         val maxX = width.toFloat()
         val maxY = height.toFloat()
 
-        // Двигаем жуков
-        bugs.forEach { it.move(maxX, maxY) }
+        // Обновляем таймер гравитации
+        if (gravityModeEnabled) {
+            gravityTimer--
+            if (gravityTimer <= 0) {
+                gravityModeEnabled = false
+            }
+        }
 
-        // Обновляем popups: уменьшаем alpha, двигаем вверх
+        // Обновляем таймер бонуса
+        bonusTimer++
+        if (!bonusVisible && bonusTimer >= bonusIntervalFrames) {
+            spawnBonus()
+            bonusTimer = 0
+        }
+
+        // Двигаем жуков
+        bugs.forEach { bug ->
+            bug.move(maxX, maxY)
+
+            // Если гравитация включена — добавляем смещение
+            if (gravityModeEnabled) {
+                bug.x += gravityX * 2f
+                bug.y += gravityY * 2f
+                bug.x = bug.x.coerceIn(bug.size, maxX - bug.size)
+                bug.y = bug.y.coerceIn(bug.size, maxY - bug.size)
+            }
+        }
+
+        // Обновляем popups
         val iterator = popups.iterator()
         while (iterator.hasNext()) {
             val popup = iterator.next()
@@ -94,15 +175,17 @@ class GameView @JvmOverloads constructor(
         }
     }
 
-    /**
-     * Отрисовка всех насекомых и всплывающих текстов
-     */
+    // ===== ОТРИСОВКА =====
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        // Рисуем каждого жука
-        bugs.forEach { bug ->
-            drawBug(canvas, bug)
+        // Рисуем жуков
+        bugs.forEach { drawBug(canvas, it) }
+
+        // Рисуем бонус
+        if (bonusVisible) {
+            drawBonus(canvas)
         }
 
         // Рисуем всплывающие тексты
@@ -115,11 +198,38 @@ class GameView @JvmOverloads constructor(
             paint.style = Paint.Style.FILL
             canvas.drawText(popup.text, popup.x, popup.y + popup.offsetY, paint)
         }
+
+        // Индикатор гравитации
+        if (gravityModeEnabled) {
+            paint.color = Color.argb(100, 255, 215, 0)
+            paint.textSize = 40f
+            paint.textAlign = Paint.Align.CENTER
+            paint.isFakeBoldText = true
+            paint.style = Paint.Style.FILL
+            canvas.drawText("🌀 ГРАВИТАЦИЯ ${gravityTimer / 60}с", width / 2f, 80f, paint)
+        }
     }
 
-    /**
-     * Рисует жука на Canvas
-     */
+    private fun drawBonus(canvas: Canvas) {
+        // Золотой круг
+        paint.color = Color.rgb(255, 215, 0)
+        paint.style = Paint.Style.FILL
+        canvas.drawCircle(bonusX, bonusY, bonusSize, paint)
+
+        // Оранжевая обводка
+        paint.color = Color.rgb(255, 165, 0)
+        paint.style = Paint.Style.STROKE
+        paint.strokeWidth = 6f
+        canvas.drawCircle(bonusX, bonusY, bonusSize, paint)
+
+        // Звёздочка
+        paint.color = Color.WHITE
+        paint.style = Paint.Style.FILL
+        paint.textSize = bonusSize * 1.2f
+        paint.textAlign = Paint.Align.CENTER
+        canvas.drawText("⭐", bonusX, bonusY + bonusSize * 0.4f, paint)
+    }
+
     private fun drawBug(canvas: Canvas, bug: Bug) {
         // Цвета в зависимости от типа
         val bodyColor: Int
@@ -132,19 +242,16 @@ class GameView @JvmOverloads constructor(
                 darkColor = Color.rgb(80, 50, 20)
                 accentColor = Color.rgb(60, 35, 15)
             }
-
             BugType.FAST -> {
                 bodyColor = Color.rgb(255, 140, 0)
                 darkColor = Color.rgb(180, 90, 0)
                 accentColor = Color.rgb(120, 60, 0)
             }
-
             BugType.BONUS -> {
                 bodyColor = Color.rgb(255, 215, 0)
                 darkColor = Color.rgb(200, 160, 0)
                 accentColor = Color.rgb(150, 120, 0)
             }
-
             BugType.POISON -> {
                 bodyColor = Color.rgb(120, 40, 160)
                 darkColor = Color.rgb(75, 0, 130)
@@ -159,13 +266,12 @@ class GameView @JvmOverloads constructor(
         paint.style = Paint.Style.FILL
         canvas.drawCircle(bug.x, bug.y + size * 0.4f, size * 0.9f, paint)
 
-        // 2. ЛАПКИ с анимацией (двигаются вверх-вниз)
+        // 2. ЛАПКИ с анимацией
         paint.color = darkColor
         paint.strokeWidth = size * 0.15f
         paint.strokeCap = Paint.Cap.ROUND
         paint.style = Paint.Style.STROKE
 
-        // Анимация: лапки двигаются в зависимости от legPhase
         val legOffset1 = Math.sin(bug.legPhase.toDouble()).toFloat() * size * 0.15f
         val legOffset2 = Math.sin(bug.legPhase.toDouble() + 3.14).toFloat() * size * 0.15f
 
@@ -197,7 +303,7 @@ class GameView @JvmOverloads constructor(
             bug.x + size * 1.1f, bug.y + size * 0.6f + legOffset2, paint
         )
 
-        // 3. ТЕЛО ЖУКА (овал)
+        // 3. ТЕЛО
         paint.style = Paint.Style.FILL
         paint.color = bodyColor
         canvas.drawOval(
@@ -233,7 +339,7 @@ class GameView @JvmOverloads constructor(
         canvas.drawCircle(bug.x - size * 0.15f, bug.y - size * 0.95f, size * 0.05f, paint)
         canvas.drawCircle(bug.x + size * 0.15f, bug.y - size * 0.95f, size * 0.05f, paint)
 
-        // 8. УСИКИ (анимированные)
+        // 8. УСИКИ
         paint.color = darkColor
         paint.strokeWidth = size * 0.08f
         paint.style = Paint.Style.STROKE
@@ -250,7 +356,6 @@ class GameView @JvmOverloads constructor(
             bug.x + size * 0.5f - antennaWiggle, bug.y - size * 1.7f, paint
         )
 
-        // Кружки на концах усиков
         paint.style = Paint.Style.FILL
         canvas.drawCircle(
             bug.x - size * 0.5f + antennaWiggle,
@@ -264,19 +369,54 @@ class GameView @JvmOverloads constructor(
             size * 0.1f,
             paint
         )
-
-        paint.style = Paint.Style.FILL
     }
 
-    /**
-     * Обработка нажатий
-     */
+    // ===== БОНУС =====
+
+    private fun spawnBonus() {
+        if (width == 0 || height == 0) return
+        bonusX = Random.nextFloat() * (width - bonusSize * 2) + bonusSize
+        bonusY = Random.nextFloat() * (height - bonusSize * 2) + bonusSize
+        bonusVisible = true
+    }
+
+    private fun activateGravityMode() {
+        gravityModeEnabled = true
+        gravityTimer = gravityDurationFrames
+        bonusVisible = false
+
+        // Играем звук
+        soundPool.play(screamSoundId, 1f, 1f, 1, 0, 1f)
+
+        popups.add(
+            PopupText(
+                x = width / 2f,
+                y = height / 2f,
+                text = "🌀 ГРАВИТАЦИЯ!",
+                color = Color.rgb(255, 215, 0)
+            )
+        )
+    }
+
+    // ===== КАСАНИЯ =====
+
     override fun onTouchEvent(event: MotionEvent): Boolean {
         if (event.action == MotionEvent.ACTION_DOWN) {
             val touchX = event.x
             val touchY = event.y
 
-            // Ищем жука, по которому попали
+            // Проверяем бонус ПЕРВЫМ
+            if (bonusVisible) {
+                val dx = touchX - bonusX
+                val dy = touchY - bonusY
+                if (Math.sqrt((dx * dx + dy * dy).toDouble()) <= bonusSize) {
+                    activateGravityMode()
+                    invalidate()
+                    return true
+                }
+            }
+
+            // Ищем жука
             val hitBug = bugs.find { bug ->
                 val dx = touchX - bug.x
                 val dy = touchY - bug.y
@@ -284,12 +424,9 @@ class GameView @JvmOverloads constructor(
             }
 
             if (hitBug != null) {
-                // Попадание
                 bugs.remove(hitBug)
                 score += hitBug.points
                 onScoreChanged?.invoke(score)
-
-                // Добавляем всплывающий текст
                 popups.add(
                     PopupText(
                         x = hitBug.x,
@@ -298,22 +435,11 @@ class GameView @JvmOverloads constructor(
                         color = if (hitBug.points > 0) Color.rgb(0, 200, 0) else Color.RED
                     )
                 )
-
-                // Спавним нового жука вместо убитого
                 spawnBug()
             } else {
-                // Промах — штраф
                 score -= 5
                 onScoreChanged?.invoke(score)
-
-                popups.add(
-                    PopupText(
-                        x = touchX,
-                        y = touchY,
-                        text = "-5",
-                        color = Color.RED
-                    )
-                )
+                popups.add(PopupText(touchX, touchY, "-5", Color.RED))
             }
 
             invalidate()
@@ -322,9 +448,8 @@ class GameView @JvmOverloads constructor(
         return super.onTouchEvent(event)
     }
 
-    /**
-     * Запуск игры
-     */
+    // ===== УПРАВЛЕНИЕ =====
+
     fun startGame() {
         if (isRunning) return
         isRunning = true
@@ -333,23 +458,19 @@ class GameView @JvmOverloads constructor(
         score = 0
         onScoreChanged?.invoke(score)
 
-        // Создаём насекомых
-        repeat(maxBugs) { spawnBug() }
+        bonusVisible = false
+        bonusTimer = 0
+        gravityModeEnabled = false
 
+        repeat(maxBugs) { spawnBug() }
         handler.post(gameLoop)
     }
 
-    /**
-     * Остановка игры
-     */
     fun stopGame() {
         isRunning = false
         handler.removeCallbacks(gameLoop)
     }
 
-    /**
-     * Создание нового насекомого
-     */
     private fun spawnBug() {
         if (width == 0 || height == 0) return
 
@@ -386,17 +507,15 @@ class GameView @JvmOverloads constructor(
         )
     }
 
-    /**
-     * Применение настроек
-     */
-    /**
-     * Применение настроек
-     */
     fun applySettings(speed: Int, maxBugsCount: Int) {
         this.speedMultiplier = speed / 5f
         this.maxBugs = maxBugsCount
 
-        // Обновляем скорость у всех жуков
+        if (isRunning) {
+            while (bugs.size > maxBugs) bugs.removeAt(bugs.size - 1)
+            while (bugs.size < maxBugs) spawnBug()
+        }
+
         bugs.forEach { bug ->
             val baseSpeed = when (bug.type) {
                 BugType.NORMAL -> 3f
@@ -405,9 +524,7 @@ class GameView @JvmOverloads constructor(
                 BugType.POISON -> 2f
             }
             val newSpeed = baseSpeed * speedMultiplier
-            // Нормализуем текущую скорость
-            val currentSpeed =
-                Math.sqrt((bug.speedX * bug.speedX + bug.speedY * bug.speedY).toDouble()).toFloat()
+            val currentSpeed = Math.sqrt((bug.speedX * bug.speedX + bug.speedY * bug.speedY).toDouble()).toFloat()
             if (currentSpeed > 0) {
                 bug.speedX = bug.speedX / currentSpeed * newSpeed
                 bug.speedY = bug.speedY / currentSpeed * newSpeed
