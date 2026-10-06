@@ -7,6 +7,7 @@ int color white 0x0
 int drawable bl 0x0
 int drawable blue_bubbles_bg 0x0
 int drawable cat 0x0
+int drawable circle_gold_widget 0x0
 int drawable circle_photo_mask 0x0
 int drawable circle_pink_bg 0x0
 int drawable deva 0x0
@@ -58,6 +59,8 @@ int id tvRoundDurationValue 0x0
 int id tvScore 0x0
 int id tvSpeedValue 0x0
 int id tvTimer 0x0
+int id tvWidgetGold 0x0
+int id tvWidgetPrice 0x0
 int id viewPager 0x0
 int id webViewRules 0x0
 int layout activity_main 0x0
@@ -69,6 +72,7 @@ int layout fragment_rules 0x0
 int layout fragment_settings 0x0
 int layout item_author 0x0
 int layout item_record 0x0
+int layout widget_gold 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int raw bug_scream 0x0
@@ -78,3 +82,5 @@ int style MyTabText 0x0
 int style Theme_Bugs 0x0
 int xml backup_rules 0x0
 int xml data_extraction_rules 0x0
+int xml gold_widget_info 0x0
+int xml network_security_config 0x0

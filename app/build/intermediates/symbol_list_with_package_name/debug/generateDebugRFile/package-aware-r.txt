@@ -8,6 +8,7 @@ color white
 drawable bl
 drawable blue_bubbles_bg
 drawable cat
+drawable circle_gold_widget
 drawable circle_photo_mask
 drawable circle_pink_bg
 drawable deva
@@ -59,6 +60,8 @@ id tvRoundDurationValue
 id tvScore
 id tvSpeedValue
 id tvTimer
+id tvWidgetGold
+id tvWidgetPrice
 id viewPager
 id webViewRules
 layout activity_main
@@ -70,6 +73,7 @@ layout fragment_rules
 layout fragment_settings
 layout item_author
 layout item_record
+layout widget_gold
 mipmap ic_launcher
 mipmap ic_launcher_round
 raw bug_scream
@@ -79,3 +83,5 @@ style MyTabText
 style Theme_Bugs
 xml backup_rules
 xml data_extraction_rules
+xml gold_widget_info
+xml network_security_config

@@ -20,6 +20,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+import com.endviyou.bugs.network.GoldRepository
+
+
 class GameFragment : Fragment() {
 
     private lateinit var gameView: GameView
@@ -47,7 +50,6 @@ class GameFragment : Fragment() {
         tvTimer = view.findViewById(R.id.tvTimer)
         btnStartStop = view.findViewById(R.id.btnStartStop)
 
-        // Первая загрузка настроек
         loadSettings()
 
         gameView.onScoreChanged = { score ->
@@ -59,6 +61,14 @@ class GameFragment : Fragment() {
                 stopGame()
             } else {
                 startGame()
+            }
+        }
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val price = GoldRepository.getGoldPrice()
+            android.util.Log.d("GOLD", "Загружен курс: $price")
+            withContext(Dispatchers.Main) {
+                gameView.setGoldPrice(price)
             }
         }
     }

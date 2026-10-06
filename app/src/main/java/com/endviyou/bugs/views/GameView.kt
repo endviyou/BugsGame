@@ -23,7 +23,7 @@ import kotlin.random.Random
 /**
  * Кастомная View — игровое поле
  * Рисует жуков, обрабатывает нажатия, показывает всплывающие очки,
- * поддерживает акселерометр (гравитацию) и звук
+ * поддерживает акселерометр (гравитацию), звук, бонус ⭐ и золотого таракана 🥇
  */
 class GameView @JvmOverloads constructor(
     context: Context,
@@ -55,7 +55,7 @@ class GameView @JvmOverloads constructor(
     private var gravityModeEnabled = false
     private var gravityTimer = 0
 
-    // ===== БОНУС =====
+    // ===== БОНУС ⭐ (15 секунд) =====
     private var bonusX = 0f
     private var bonusY = 0f
     private val bonusSize = 60f
@@ -64,9 +64,18 @@ class GameView @JvmOverloads constructor(
     private val bonusIntervalFrames = 15 * 60   // 15 сек × 60 FPS
     private val gravityDurationFrames = 5 * 60  // 5 секунд
 
+    // ===== ЗОЛОТОЙ ТАРАКАН 🥇 (20 секунд) =====
+    private val goldenBugIntervalFrames = 20 * 60   // 20 сек × 60 FPS
+    private var goldenBugTimer = 0
+    private var currentGoldPrice: Double = 0.0
+
     // ===== ЗВУК =====
     private lateinit var soundPool: SoundPool
     private var screamSoundId = 0
+
+    fun setGoldPrice(price: Double) {
+        currentGoldPrice = price
+    }
 
     init {
         // Инициализация сенсора
@@ -143,18 +152,27 @@ class GameView @JvmOverloads constructor(
             }
         }
 
-        // Обновляем таймер бонуса
+        // Обновляем таймер бонуса ⭐ (15 сек)
         bonusTimer++
         if (!bonusVisible && bonusTimer >= bonusIntervalFrames) {
             spawnBonus()
             bonusTimer = 0
         }
 
+        // Обновляем таймер золотого таракана 🥇 (20 сек)
+        goldenBugTimer++
+        if (goldenBugTimer >= goldenBugIntervalFrames) {
+            val hasGolden = bugs.any { it.type == BugType.BONUS }
+            if (!hasGolden) {
+                spawnGoldenBug()
+            }
+            goldenBugTimer = 0
+        }
+
         // Двигаем жуков
         bugs.forEach { bug ->
             bug.move(maxX, maxY)
 
-            // Если гравитация включена — добавляем смещение
             if (gravityModeEnabled) {
                 bug.x += gravityX * 2f
                 bug.y += gravityY * 2f
@@ -180,10 +198,10 @@ class GameView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        // Рисуем жуков
+        // Рисуем жуков (включая золотого таракана 🥇)
         bugs.forEach { drawBug(canvas, it) }
 
-        // Рисуем бонус
+        // Рисуем бонус ⭐
         if (bonusVisible) {
             drawBonus(canvas)
         }
@@ -231,7 +249,6 @@ class GameView @JvmOverloads constructor(
     }
 
     private fun drawBug(canvas: Canvas, bug: Bug) {
-        // Цвета в зависимости от типа
         val bodyColor: Int
         val darkColor: Int
         val accentColor: Int
@@ -266,7 +283,7 @@ class GameView @JvmOverloads constructor(
         paint.style = Paint.Style.FILL
         canvas.drawCircle(bug.x, bug.y + size * 0.4f, size * 0.9f, paint)
 
-        // 2. ЛАПКИ с анимацией
+        // 2. ЛАПКИ
         paint.color = darkColor
         paint.strokeWidth = size * 0.15f
         paint.strokeCap = Paint.Cap.ROUND
@@ -275,7 +292,6 @@ class GameView @JvmOverloads constructor(
         val legOffset1 = Math.sin(bug.legPhase.toDouble()).toFloat() * size * 0.15f
         val legOffset2 = Math.sin(bug.legPhase.toDouble() + 3.14).toFloat() * size * 0.15f
 
-        // Левая сторона
         canvas.drawLine(
             bug.x - size * 0.5f, bug.y - size * 0.3f,
             bug.x - size * 1.1f, bug.y - size * 0.6f + legOffset1, paint
@@ -288,8 +304,6 @@ class GameView @JvmOverloads constructor(
             bug.x - size * 0.5f, bug.y + size * 0.3f,
             bug.x - size * 1.1f, bug.y + size * 0.6f + legOffset1, paint
         )
-
-        // Правая сторона
         canvas.drawLine(
             bug.x + size * 0.5f, bug.y - size * 0.3f,
             bug.x + size * 1.1f, bug.y - size * 0.6f + legOffset2, paint
@@ -323,7 +337,7 @@ class GameView @JvmOverloads constructor(
         paint.color = darkColor
         canvas.drawCircle(bug.x, bug.y - size * 0.9f, size * 0.4f, paint)
 
-        // 6. ТОЧКИ НА ТЕЛЕ
+        // 6. ТОЧКИ
         paint.color = accentColor
         canvas.drawCircle(bug.x - size * 0.4f, bug.y - size * 0.3f, size * 0.15f, paint)
         canvas.drawCircle(bug.x + size * 0.4f, bug.y - size * 0.3f, size * 0.15f, paint)
@@ -369,6 +383,15 @@ class GameView @JvmOverloads constructor(
             size * 0.1f,
             paint
         )
+
+        // 9. ЭМОДЗИ 🥇 ДЛЯ ЗОЛОТОГО ТАРАКАНА
+        if (bug.type == BugType.BONUS) {
+            paint.color = Color.WHITE
+            paint.textSize = size * 0.8f
+            paint.textAlign = Paint.Align.CENTER
+            paint.style = Paint.Style.FILL
+            canvas.drawText("🥇", bug.x, bug.y + size * 0.3f, paint)
+        }
     }
 
     // ===== БОНУС =====
@@ -380,12 +403,35 @@ class GameView @JvmOverloads constructor(
         bonusVisible = true
     }
 
+    // ===== ЗОЛОТОЙ ТАРАКАН =====
+
+    private fun spawnGoldenBug() {
+        if (width == 0 || height == 0) return
+
+        val goldPoints = if (currentGoldPrice > 0) {
+            (currentGoldPrice / 100).toInt()
+        } else {
+            50
+        }
+
+        bugs.add(
+            Bug(
+                x = Random.nextFloat() * (width - 50 * 2) + 50,
+                y = Random.nextFloat() * (height - 50 * 2) + 50,
+                speedX = if (Random.nextBoolean()) 2f else -2f,
+                speedY = if (Random.nextBoolean()) 2f else -2f,
+                size = 50f,
+                points = goldPoints,
+                type = BugType.BONUS
+            )
+        )
+    }
+
     private fun activateGravityMode() {
         gravityModeEnabled = true
         gravityTimer = gravityDurationFrames
         bonusVisible = false
 
-        // Играем звук
         soundPool.play(screamSoundId, 1f, 1f, 1, 0, 1f)
 
         popups.add(
@@ -405,7 +451,7 @@ class GameView @JvmOverloads constructor(
             val touchX = event.x
             val touchY = event.y
 
-            // Проверяем бонус ПЕРВЫМ
+            // Бонус ⭐
             if (bonusVisible) {
                 val dx = touchX - bonusX
                 val dy = touchY - bonusY
@@ -416,7 +462,7 @@ class GameView @JvmOverloads constructor(
                 }
             }
 
-            // Ищем жука
+            // Ищем жука (включая золотого таракана)
             val hitBug = bugs.find { bug ->
                 val dx = touchX - bug.x
                 val dy = touchY - bug.y
@@ -435,7 +481,10 @@ class GameView @JvmOverloads constructor(
                         color = if (hitBug.points > 0) Color.rgb(0, 200, 0) else Color.RED
                     )
                 )
-                spawnBug()
+                // Если это был золотой таракан — не спавним нового
+                if (hitBug.type != BugType.BONUS) {
+                    spawnBug()
+                }
             } else {
                 score -= 5
                 onScoreChanged?.invoke(score)
@@ -461,6 +510,7 @@ class GameView @JvmOverloads constructor(
         bonusVisible = false
         bonusTimer = 0
         gravityModeEnabled = false
+        goldenBugTimer = 0
 
         repeat(maxBugs) { spawnBug() }
         handler.post(gameLoop)
@@ -474,24 +524,26 @@ class GameView @JvmOverloads constructor(
     private fun spawnBug() {
         if (width == 0 || height == 0) return
 
-        val type = BugType.values().random()
+        // BONUS больше не выбирается случайно — только по таймеру
+        val types = listOf(BugType.NORMAL, BugType.FAST, BugType.POISON)
+        val type = types.random()
         val size = when (type) {
             BugType.NORMAL -> 30f
             BugType.FAST -> 20f
-            BugType.BONUS -> 25f
             BugType.POISON -> 35f
+            else -> 25f
         }
         val points = when (type) {
             BugType.NORMAL -> 10
             BugType.FAST -> 25
-            BugType.BONUS -> 50
             BugType.POISON -> -20
+            else -> 0
         }
         val speed = when (type) {
             BugType.NORMAL -> 3f
             BugType.FAST -> 7f
-            BugType.BONUS -> 4f
             BugType.POISON -> 2f
+            else -> 3f
         } * speedMultiplier
 
         bugs.add(
