@@ -29,6 +29,7 @@ drawable vodoley
 drawable vs
 id btnSave
 id btnSaveSettings
+id btnSelectPlayer
 id btnStartStop
 id calendarView
 id etFullName

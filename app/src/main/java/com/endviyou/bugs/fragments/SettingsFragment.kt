@@ -44,6 +44,16 @@ class SettingsFragment : Fragment() {
         setupSaveButton()
     }
 
+    // ↓↓↓ ДОБАВИТЬ ЭТОТ МЕТОД ↓↓↓
+    override fun onResume() {
+        super.onResume()
+        // Перечитываем при каждом показе вкладки
+        if (::seekBarSpeed.isInitialized) {
+            loadSavedSettings()
+        }
+    }
+// ↑↑↑ КОНЕЦ ↑↑↑
+
     private fun initViews(view: View) {
         seekBarSpeed = view.findViewById(R.id.seekBarSpeed)
         seekBarMaxBugs = view.findViewById(R.id.seekBarMaxBugs)

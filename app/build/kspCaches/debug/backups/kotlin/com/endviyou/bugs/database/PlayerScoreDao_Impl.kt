@@ -91,13 +91,41 @@ public class PlayerScoreDao_Impl(
     }
   }
 
-  public override suspend fun getScoresByNickname(nickname: String): List<PlayerScore> {
-    val _sql: String = "SELECT * FROM player_scores WHERE nickname = ? ORDER BY date DESC"
+  public override suspend fun isNicknameExists(nickname: String): Int {
+    val _sql: String = "SELECT COUNT(*) FROM player_scores WHERE nickname = ?"
     return performSuspending(__db, true, false) { _connection ->
       val _stmt: SQLiteStatement = _connection.prepare(_sql)
       try {
         var _argIndex: Int = 1
         _stmt.bindText(_argIndex, nickname)
+        val _result: Int
+        if (_stmt.step()) {
+          val _tmp: Int
+          _tmp = _stmt.getLong(0).toInt()
+          _result = _tmp
+        } else {
+          _result = 0
+        }
+        _result
+      } finally {
+        _stmt.close()
+      }
+    }
+  }
+
+  public override suspend fun getUniquePlayers(): List<PlayerScore> {
+    val _sql: String = """
+        |
+        |        SELECT * FROM player_scores 
+        |        WHERE id IN (
+        |            SELECT MAX(id) FROM player_scores GROUP BY nickname
+        |        )
+        |        ORDER BY nickname ASC
+        |    
+        """.trimMargin()
+    return performSuspending(__db, true, false) { _connection ->
+      val _stmt: SQLiteStatement = _connection.prepare(_sql)
+      try {
         val _columnIndexOfId: Int = getColumnIndexOrThrow(_stmt, "id")
         val _columnIndexOfNickname: Int = getColumnIndexOrThrow(_stmt, "nickname")
         val _columnIndexOfScore: Int = getColumnIndexOrThrow(_stmt, "score")
@@ -136,28 +164,6 @@ public class PlayerScoreDao_Impl(
     }
   }
 
-  public override suspend fun isNicknameExists(nickname: String): Int {
-    val _sql: String = "SELECT COUNT(*) FROM player_scores WHERE nickname = ?"
-    return performSuspending(__db, true, false) { _connection ->
-      val _stmt: SQLiteStatement = _connection.prepare(_sql)
-      try {
-        var _argIndex: Int = 1
-        _stmt.bindText(_argIndex, nickname)
-        val _result: Int
-        if (_stmt.step()) {
-          val _tmp: Int
-          _tmp = _stmt.getLong(0).toInt()
-          _result = _tmp
-        } else {
-          _result = 0
-        }
-        _result
-      } finally {
-        _stmt.close()
-      }
-    }
-  }
-
   public override suspend fun getBestScore(nickname: String): Int? {
     val _sql: String = "SELECT MAX(score) FROM player_scores WHERE nickname = ?"
     return performSuspending(__db, true, false) { _connection ->
@@ -178,18 +184,6 @@ public class PlayerScoreDao_Impl(
           _result = null
         }
         _result
-      } finally {
-        _stmt.close()
-      }
-    }
-  }
-
-  public override suspend fun deleteAll() {
-    val _sql: String = "DELETE FROM player_scores"
-    return performSuspending(__db, false, true) { _connection ->
-      val _stmt: SQLiteStatement = _connection.prepare(_sql)
-      try {
-        _stmt.step()
       } finally {
         _stmt.close()
       }

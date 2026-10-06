@@ -24,26 +24,27 @@ interface PlayerScoreDao {
     suspend fun getAllScores(): List<PlayerScore>
 
     /**
-     * Получить записи конкретного игрока
-     */
-    @Query("SELECT * FROM player_scores WHERE nickname = :nickname ORDER BY date DESC")
-    suspend fun getScoresByNickname(nickname: String): List<PlayerScore>
-
-    /**
      * Проверить, существует ли игрок с таким ником
      */
     @Query("SELECT COUNT(*) FROM player_scores WHERE nickname = :nickname")
     suspend fun isNicknameExists(nickname: String): Int
 
     /**
+     * Получить уникальных игроков (последняя запись каждого)
+     * Для диалога "Выбрать игрока"
+     */
+    @Query("""
+        SELECT * FROM player_scores 
+        WHERE id IN (
+            SELECT MAX(id) FROM player_scores GROUP BY nickname
+        )
+        ORDER BY nickname ASC
+    """)
+    suspend fun getUniquePlayers(): List<PlayerScore>
+
+    /**
      * Получить лучший результат игрока
      */
     @Query("SELECT MAX(score) FROM player_scores WHERE nickname = :nickname")
     suspend fun getBestScore(nickname: String): Int?
-
-    /**
-     * Удалить все записи (для теста)
-     */
-    @Query("DELETE FROM player_scores")
-    suspend fun deleteAll()
 }

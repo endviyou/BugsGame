@@ -36,6 +36,10 @@
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-43:/drawable/oven.png"
     },
     {
+        "merged": "com.endviyou.bugs.app-debug-41:/layout_fragment_registration.xml.flat",
+        "source": "com.endviyou.bugs.app-main-43:/layout/fragment_registration.xml"
+    },
+    {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-41:/xml_data_extraction_rules.xml.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-43:/xml/data_extraction_rules.xml"
     },
@@ -66,10 +70,6 @@
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-41:/layout_item_author.xml.flat",
         "source": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-main-43:/layout/item_author.xml"
-    },
-    {
-        "merged": "com.endviyou.bugs.app-debug-41:/layout_fragment_records.xml.flat",
-        "source": "com.endviyou.bugs.app-main-43:/layout/fragment_records.xml"
     },
     {
         "merged": "/Users/endviyou/.gradle/daemon/9.6.0/com.endviyou.bugs.app-debug-41:/mipmap-anydpi-v26_ic_launcher.xml.flat",

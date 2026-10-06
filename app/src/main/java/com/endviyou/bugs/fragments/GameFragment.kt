@@ -129,6 +129,9 @@ class GameFragment : Fragment() {
     }
 
     private fun startGame() {
+        // Перечитываем настройки из SharedPreferences ПЕРЕД стартом
+        loadSettings()
+
         isGameRunning = true
         btnStartStop.text = "Стоп"
         gameView.startGame()

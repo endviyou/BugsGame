@@ -11,9 +11,9 @@ data class PlayerScore(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
 
-    val nickname: String,        // Имя игрока (уникальное)
+    val nickname: String,        // Имя игрока
     val score: Int,              // Очки
-    val difficulty: Int,         // Уровень сложности (1-10)
+    val difficulty: Int,         // Уровень сложности
     val course: String,          // Курс
     val gender: String,          // Пол
     val zodiacSign: String,      // Знак зодиака

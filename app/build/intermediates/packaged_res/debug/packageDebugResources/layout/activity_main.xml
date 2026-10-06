@@ -14,7 +14,7 @@
         app:tabTextColor="#666666"
         app:tabSelectedTextColor="#0d2818"
         app:tabIndicatorColor="#0d2818"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         app:tabGravity="fill"
         app:tabTextAppearance="@style/MyTabText"/>
 

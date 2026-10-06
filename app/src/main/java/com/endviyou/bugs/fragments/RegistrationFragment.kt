@@ -29,6 +29,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+import android.app.AlertDialog
+
+
+
+
 class RegistrationFragment : Fragment() {
 
     // Объявляем все элементы интерфейса
@@ -41,6 +46,7 @@ class RegistrationFragment : Fragment() {
     private lateinit var rgGender: RadioGroup
     private lateinit var ivZodiac: ImageView
 
+    private lateinit var btnSelectPlayer: Button
     private var selectedDate: Date = Calendar.getInstance().time
 
     override fun onCreateView(
@@ -59,6 +65,7 @@ class RegistrationFragment : Fragment() {
         setupSeekBar()
         setupCalendarView()
         setupSaveButton()
+        setupSelectPlayerButton()
     }
 
     private fun initViews(view: View) {
@@ -70,6 +77,7 @@ class RegistrationFragment : Fragment() {
         tvResult = view.findViewById(R.id.tvResult)
         rgGender = view.findViewById(R.id.rgGender)
         ivZodiac = view.findViewById(R.id.ivZodiac)
+        btnSelectPlayer = view.findViewById(R.id.btnSelectPlayer)
     }
 
     private fun setupSpinner() {
@@ -187,6 +195,84 @@ class RegistrationFragment : Fragment() {
             }
         }
     }
+    private fun setupSelectPlayerButton() {
+        btnSelectPlayer.setOnClickListener {
+            showSelectPlayerDialog()
+        }
+    }
+
+    private fun showSelectPlayerDialog() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val dao = AppDatabase.getInstance(requireContext()).playerScoreDao()
+            val players = dao.getUniquePlayers()
+
+            withContext(Dispatchers.Main) {
+                if (players.isEmpty()) {
+                    android.widget.Toast.makeText(
+                        requireContext(),
+                        "Нет сохранённых игроков. Зарегистрируйтесь сначала!",
+                        android.widget.Toast.LENGTH_LONG
+                    ).show()
+                    return@withContext
+                }
+
+                val nicknames = players.map { "${it.nickname} (лучший: ${it.score})" }.toTypedArray()
+
+                android.app.AlertDialog.Builder(requireContext())
+                    .setTitle("Выберите игрока")
+                    .setItems(nicknames) { _, which ->
+                        val selected = players[which]
+                        fillFormWithPlayer(selected)
+                    }
+                    .setNegativeButton("Отмена", null)
+                    .show()
+            }
+        }
+    }
+
+    private fun fillFormWithPlayer(player: com.endviyou.bugs.database.PlayerScore) {
+        // ФИО
+        val etFullName = view?.findViewById<TextInputEditText>(R.id.etFullName)
+        etFullName?.setText(player.nickname)
+
+        // Пол
+        when (player.gender) {
+            "Мужской" -> rgGender.check(R.id.rbMale)
+            "Женский" -> rgGender.check(R.id.rbFemale)
+        }
+
+        // Сложность
+        seekBarDifficulty.progress = player.difficulty
+        tvDifficultyValue.text = when (player.difficulty) {
+            0, 1 -> "Очень легкий (${player.difficulty})"
+            2, 3 -> "Легкий (${player.difficulty})"
+            4, 5, 6 -> "Средний (${player.difficulty})"
+            7, 8 -> "Сложный (${player.difficulty})"
+            9, 10 -> "Очень сложный (${player.difficulty})"
+            else -> "Средний (${player.difficulty})"
+        }
+
+        // Курс
+        val courses = resources.getStringArray(R.array.courses)
+        val courseIndex = courses.indexOf(player.course)
+        if (courseIndex >= 0) {
+            spinnerCourse.setSelection(courseIndex)
+        }
+
+        // Знак зодиака
+        val iconResId = ZodiacHelper.getZodiacIconResID(player.zodiacSign)
+        ivZodiac.setImageResource(iconResId)
+
+        // Сохраняем ник
+        val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        prefs.edit().putString("nickname", player.nickname).apply()
+
+        android.widget.Toast.makeText(
+            requireContext(),
+            "Выбран игрок: ${player.nickname}",
+            android.widget.Toast.LENGTH_SHORT
+        ).show()
+    }
 
     private fun proceedWithSave(fullName: String, etFullName: TextInputEditText?) {
         val gender = when (rgGender.checkedRadioButtonId) {
@@ -205,6 +291,16 @@ class RegistrationFragment : Fragment() {
         // Сохраняем ник в SharedPreferences
         val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         prefs.edit().putString("nickname", fullName).apply()
+
+        // ↓↓↓ ДОБАВЛЕНО: сложность → настройки игры ↓↓↓
+        val difficulty = seekBarDifficulty.progress  // 0-10
+
+        val gamePrefs = requireContext().getSharedPreferences("game_settings", Context.MODE_PRIVATE)
+        gamePrefs.edit()
+            .putInt("speed", difficulty.coerceAtLeast(1))           // скорость 1-10
+            .putInt("max_bugs", (difficulty * 2).coerceAtLeast(1))  // жуков 1-20
+            .apply()
+        // ↑↑↑ КОНЕЦ ДОБАВЛЕНИЯ ↑↑↑
 
         val player = Player(
             fullName = fullName,
