@@ -504,7 +504,6 @@ class GameView @JvmOverloads constructor(
         isRunning = true
         bugs.clear()
         popups.clear()
-        score = 0
         onScoreChanged?.invoke(score)
 
         bonusVisible = false
@@ -514,6 +513,13 @@ class GameView @JvmOverloads constructor(
 
         repeat(maxBugs) { spawnBug() }
         handler.post(gameLoop)
+    }
+
+    /**
+     * Устанавливает счёт (вызывается из GameFragment при восстановлении)
+     */
+    fun setScore(newScore: Int) {
+        this.score = newScore
     }
 
     fun stopGame() {
