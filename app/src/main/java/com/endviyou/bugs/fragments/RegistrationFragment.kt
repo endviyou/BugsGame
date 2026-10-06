@@ -21,6 +21,14 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
+import com.google.android.material.textfield.TextInputEditText
+import android.content.Context
+import com.endviyou.bugs.database.AppDatabase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
 class RegistrationFragment : Fragment() {
 
     // Объявляем все элементы интерфейса
@@ -135,11 +143,52 @@ class RegistrationFragment : Fragment() {
         val etFullName = view?.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etFullName)
         val fullName = etFullName?.text.toString().trim()
 
+        // ===== ВАЛИДАЦИЯ =====
+
+        // 1. Проверка на пустоту
         if (fullName.isEmpty()) {
             etFullName?.error = "Введите ФИО"
             return
         }
 
+        // 2. Проверка минимальной длины
+        if (fullName.length < 3) {
+            etFullName?.error = "Минимум 3 символа"
+            return
+        }
+
+        // 3. Проверка максимальной длины
+        if (fullName.length > 20) {
+            etFullName?.error = "Максимум 20 символов"
+            return
+        }
+
+        // 4. Проверка допустимых символов
+        if (!fullName.matches(Regex("[a-zA-Zа-яА-Я0-9_ ]+"))) {
+            etFullName?.error = "Только буквы, цифры, пробел и _"
+            return
+        }
+
+        // ===== ПРОВЕРКА УНИКАЛЬНОСТИ ЧЕРЕЗ ROOM =====
+        CoroutineScope(Dispatchers.IO).launch {
+            val database = AppDatabase.getInstance(requireContext())
+            val dao = database.playerScoreDao()
+
+            val exists = dao.isNicknameExists(fullName)
+
+            withContext(Dispatchers.Main) {
+                if (exists > 0) {
+                    etFullName?.error = "Этот ник уже занят"
+                    return@withContext
+                }
+
+                // ===== ВСЁ ОК — СОХРАНЯЕМ =====
+                proceedWithSave(fullName, etFullName)
+            }
+        }
+    }
+
+    private fun proceedWithSave(fullName: String, etFullName: TextInputEditText?) {
         val gender = when (rgGender.checkedRadioButtonId) {
             R.id.rbMale -> "Мужской"
             R.id.rbFemale -> "Женский"
@@ -152,6 +201,10 @@ class RegistrationFragment : Fragment() {
         val calendar = Calendar.getInstance()
         calendar.time = birthDate
         val zodiac = ZodiacHelper.getZodiacSign(calendar)
+
+        // Сохраняем ник в SharedPreferences
+        val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        prefs.edit().putString("nickname", fullName).apply()
 
         val player = Player(
             fullName = fullName,

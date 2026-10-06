@@ -12,22 +12,22 @@
 9-->INJECTED
 10
 11    <permission
-11-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
 12        android:name="com.endviyou.bugs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="com.endviyou.bugs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-15-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
 16
 17    <application
 17-->/Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:5:5-24:19
 18        android:allowBackup="true"
 18-->/Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:6:9-35
 19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+19-->[androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
 20        android:dataExtractionRules="@xml/data_extraction_rules"
 20-->/Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:7:9-65
 21        android:debuggable="true"
@@ -67,70 +67,79 @@
 39        </activity>
 40
 41        <provider
-41-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+41-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 42            android:name="androidx.startup.InitializationProvider"
-42-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+42-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
 43            android:authorities="com.endviyou.bugs.androidx-startup"
-43-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+43-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
 44            android:exported="false" >
-44-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+44-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
 45            <meta-data
-45-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+45-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 46                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-46-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+46-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 47                android:value="androidx.startup" />
-47-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+47-->[androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 48            <meta-data
-48-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+48-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
 49                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-49-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+49-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
 50                android:value="androidx.startup" />
-50-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+50-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
 51            <meta-data
-51-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+51-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
 52                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-52-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+52-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
 53                android:value="androidx.startup" />
-53-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+53-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
 54        </provider>
 55
-56        <receiver
-56-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-57            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-57-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-58            android:directBootAware="false"
-58-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-59            android:enabled="true"
-59-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-60            android:exported="true"
-60-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-61            android:permission="android.permission.DUMP" >
-61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-62            <intent-filter>
-62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-63                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-64            </intent-filter>
-65            <intent-filter>
-65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-66                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-67            </intent-filter>
-68            <intent-filter>
-68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-69                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-69-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-69-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-70            </intent-filter>
-71            <intent-filter>
-71-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-72                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-72-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-73            </intent-filter>
-74        </receiver>
-75    </application>
-76
-77</manifest>
+56        <service
+56-->[androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:24:9-28:63
+57            android:name="androidx.room.MultiInstanceInvalidationService"
+57-->[androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:25:13-74
+58            android:directBootAware="true"
+58-->[androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:26:13-43
+59            android:exported="false" />
+59-->[androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:27:13-37
+60
+61        <receiver
+61-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+62            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+62-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+63            android:directBootAware="false"
+63-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+64            android:enabled="true"
+64-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+65            android:exported="true"
+65-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+66            android:permission="android.permission.DUMP" >
+66-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+67            <intent-filter>
+67-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+68                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+68-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+69            </intent-filter>
+70            <intent-filter>
+70-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+71                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+71-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+71-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+72            </intent-filter>
+73            <intent-filter>
+73-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+74                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+74-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+75            </intent-filter>
+76            <intent-filter>
+76-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+77                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+77-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+78            </intent-filter>
+79        </receiver>
+80    </application>
+81
+82</manifest>

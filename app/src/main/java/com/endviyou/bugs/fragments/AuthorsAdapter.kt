@@ -31,4 +31,4 @@ class AuthorsAdapter(
 
         return view
     }
-}  // ← ВОТ ЭТА СКОБКА ЗАКРЫВАЕТ КЛАСС
+}

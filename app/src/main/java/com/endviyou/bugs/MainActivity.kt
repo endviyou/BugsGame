@@ -43,12 +43,13 @@ class MainActivity : AppCompatActivity() {
         tabLayout.addTab(tabLayout.newTab().setText("Настройки"))
         tabLayout.addTab(tabLayout.newTab().setText("Игра"))
         tabLayout.addTab(tabLayout.newTab().setText("Авторы"))
+        tabLayout.addTab(tabLayout.newTab().setText("Рекорды"))
     }
 }
 
 class TabsAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
 
-    override fun getItemCount(): Int = 5
+    override fun getItemCount(): Int = 6
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
@@ -57,6 +58,7 @@ class TabsAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) 
             2 -> SettingsFragment()       // Настройки
             3 -> GameFragment()           // Игра
             4 -> AuthorsFragment()        // Авторы
+            5 -> RecordsFragment()  // ← рекорды
             else -> RegistrationFragment()
         }
     }

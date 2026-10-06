@@ -37,6 +37,7 @@ int id lvAuthors 0x0
 int id rbFemale 0x0
 int id rbMale 0x0
 int id rgGender 0x0
+int id rvRecords 0x0
 int id seekBarBonusInterval 0x0
 int id seekBarDifficulty 0x0
 int id seekBarMaxBugs 0x0
@@ -46,8 +47,11 @@ int id spinnerCourse 0x0
 int id tabLayout 0x0
 int id tvAuthorName 0x0
 int id tvBonusIntervalValue 0x0
+int id tvDetails 0x0
 int id tvDifficultyValue 0x0
 int id tvMaxBugsValue 0x0
+int id tvNickname 0x0
+int id tvRank 0x0
 int id tvResult 0x0
 int id tvRoundDurationValue 0x0
 int id tvScore 0x0
@@ -58,10 +62,12 @@ int id webViewRules 0x0
 int layout activity_main 0x0
 int layout fragment_authors 0x0
 int layout fragment_game 0x0
+int layout fragment_records 0x0
 int layout fragment_registration 0x0
 int layout fragment_rules 0x0
 int layout fragment_settings 0x0
 int layout item_author 0x0
+int layout item_record 0x0
 int mipmap ic_launcher 0x0
 int mipmap ic_launcher_round 0x0
 int string app_name 0x0

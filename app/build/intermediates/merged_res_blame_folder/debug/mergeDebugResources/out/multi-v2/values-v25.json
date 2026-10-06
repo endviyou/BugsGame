@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.endviyou.bugs.app-mergeDebugResources-35:/values-v25/values-v25.xml",
+            "outputFile": "com.endviyou.bugs.app-mergeDebugResources-39:/values-v25/values-v25.xml",
             "map": [
                 {
-                    "source": "/Users/endviyou/.gradle/caches/9.6.0/transforms/470afed79e2677b7f8fad6da547b9d85/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
+                    "source": "/Users/endviyou/.gradle/caches/9.6.0/transforms/ca1fbba643946172f0eb441161d4de17/transformed/appcompat-1.6.1/res/values-v25/values-v25.xml",
                     "from": {
                         "startLines": "2,3,4,6",
                         "startColumns": "4,4,4,4",

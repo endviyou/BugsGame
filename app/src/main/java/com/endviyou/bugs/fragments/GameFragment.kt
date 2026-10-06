@@ -13,6 +13,13 @@ import androidx.fragment.app.Fragment
 import com.endviyou.bugs.R
 import com.endviyou.bugs.views.GameView
 
+import com.endviyou.bugs.database.AppDatabase
+import com.endviyou.bugs.database.PlayerScore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
 class GameFragment : Fragment() {
 
     private lateinit var gameView: GameView
@@ -75,7 +82,50 @@ class GameFragment : Fragment() {
         roundDuration = prefs.getInt("round_duration", 60)
 
         gameView.applySettings(speed, maxBugs)
-        tvTimer.text = "⏱ $roundDuration"
+        tvTimer.text = "$roundDuration"
+    }
+
+    private fun saveScoreToDatabase() {
+        val nickname = getCurrentNickname() ?: return
+        val score = gameView.score
+
+        // Читаем данные из SharedPreferences
+        val prefs = requireContext().getSharedPreferences("game_settings", Context.MODE_PRIVATE)
+        val difficulty = prefs.getInt("speed", 5)
+        val course = "4 курс"  // ← берем из регистрации
+        val gender = "Женский"
+        val zodiac = "Скорпион"
+
+        // Получаем базу
+        val database = AppDatabase.getInstance(requireContext())
+        val dao = database.playerScoreDao()
+
+        // Сохраняем асинхронно
+        CoroutineScope(Dispatchers.IO).launch {
+            dao.insert(
+                PlayerScore(
+                    nickname = nickname,
+                    score = score,
+                    difficulty = difficulty,
+                    course = course,
+                    gender = gender,
+                    zodiacSign = zodiac
+                )
+            )
+
+            withContext(Dispatchers.Main) {
+                Toast.makeText(
+                    requireContext(),
+                    "Результат сохранён!",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
+    }
+
+    private fun getCurrentNickname(): String? {
+        val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        return prefs.getString("nickname", null)
     }
 
     private fun startGame() {
@@ -86,16 +136,17 @@ class GameFragment : Fragment() {
         countDownTimer = object : CountDownTimer(roundDuration * 1000L, 1000L) {
             override fun onTick(millisUntilFinished: Long) {
                 val secondsLeft = millisUntilFinished / 1000
-                tvTimer.text = "⏱ $secondsLeft"
+                tvTimer.text = "$secondsLeft"
             }
 
             override fun onFinish() {
                 stopGame()
                 Toast.makeText(
                     requireContext(),
-                    "🏁 Раунд окончен! Очки: ${gameView.score}",
+                    "Раунд окончен! Очки: ${gameView.score}",
                     Toast.LENGTH_LONG
                 ).show()
+                saveScoreToDatabase()
             }
         }.start()
     }
@@ -105,7 +156,7 @@ class GameFragment : Fragment() {
         btnStartStop.text = "Старт"
         gameView.stopGame()
         countDownTimer?.cancel()
-        tvTimer.text = "⏱ $roundDuration"
+        tvTimer.text = "$roundDuration"
     }
 
     override fun onPause() {

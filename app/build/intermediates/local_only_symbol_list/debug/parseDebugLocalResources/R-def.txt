@@ -39,6 +39,7 @@ id lvAuthors
 id rbFemale
 id rbMale
 id rgGender
+id rvRecords
 id seekBarBonusInterval
 id seekBarDifficulty
 id seekBarMaxBugs
@@ -48,8 +49,11 @@ id spinnerCourse
 id tabLayout
 id tvAuthorName
 id tvBonusIntervalValue
+id tvDetails
 id tvDifficultyValue
 id tvMaxBugsValue
+id tvNickname
+id tvRank
 id tvResult
 id tvRoundDurationValue
 id tvScore
@@ -60,10 +64,12 @@ id webViewRules
 layout activity_main
 layout fragment_authors
 layout fragment_game
+layout fragment_records
 layout fragment_registration
 layout fragment_rules
 layout fragment_settings
 layout item_author
+layout item_record
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

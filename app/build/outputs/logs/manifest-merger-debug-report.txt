@@ -4,54 +4,58 @@ ADDED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:2
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:2:1-26:12
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.android.material:material:1.11.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/445b83d05d84739aa5edcf75cfc9b2f5/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/22281245dfbb12904e6bc2470025e9e8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c57f068a09875c3fe03a8fcfb6dcfbe/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/470afed79e2677b7f8fad6da547b9d85/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/e375e18badade3a5595f091c57e2072f/transformed/recyclerview-1.3.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f05440ddc84e229b9b3b14b57415eb78/transformed/viewpager2-1.1.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/c378bee4f7219b678f62748c097d285a/transformed/fragment-1.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/09d22bad14ed2ab31bfdd25afa845b75/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0073ccea224c6e7072265ae0d8c8b75e/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a838cfc628cd980e47794c0784854e26/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e24fb0c54d846e5968f846ead7faa6b1/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/1fe7157968fd356804e2814ad7996472/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5ba6b8ee5e93d063b10ec41e4c5fb44c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8eb373daacceb84feebe2917d152ee09/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/293228347540de3a2e7e9fff36f8fd38/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d44fbafaac8a93ff2a20695cef009765/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/9227d4a5e4f25a007c9f7982de01fe4f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7da9f15197a8eceb065eaeb57be875e6/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/cdfaad2c63b340f00cd7f95218a8c655/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8c3b4d1a48dec5c66b82b99de415e0d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0f78e78c14b8472eb77aff2fa5176f05/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/428f86f013344bb5e215c4edbaafcae0/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/f56befceb8c3cbcef51c4b2c719e0b25/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/374f1582a2fbb386e2859803e17d766f/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/7bb3df08a838eecbf93f6025520d76ba/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0de3b2a651cfd11db5205539d62aa5e4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4149fc98bd1200445b013136bab8a3cf/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/a562129b2366180fbb78cf4f7c053aa9/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/3b7f0e80e142305d0aabb1fec88401db/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6c77fdfcee3dc09ebb35af775c28142/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/60fae34b13b86ac2de346ed4f5e9cd07/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4f88ba7e51366257b49cf3bc1c54e4e6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/590194e6939d5ebf83c1cfd6a73a168a/transformed/core-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/3fb72b9df4306d986f467630a5abb817/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/6a63bf4586721cfc42b11d09dba01caa/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4e0f89cba0c7d2942d00dcca6d29090a/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/00a1938df214e1e1ef820953f343807a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c4291b07d0a28b8d8cd03deeaf4fcf8/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/28c90d1031d8db96af73876582eec3d4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4133f6abef0bdcfafa9addd35afc84f9/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2a1215ef4bae1d354790bdafdb9202d5/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1db87d474957b89372dde3f9df5ddf1f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/04e167c92d0cbb52164dd1774c2789cb/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.10.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7a6f6c445b6bc21e1df88fd79790e080/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/3f7abffa21ef2a9a5b8b3cdcccd1c78f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/73473debf2bc3ae85e7b398a6cb71678/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ca1fbba643946172f0eb441161d4de17/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0dfa182e96a195b549153a6dc0d7ffe3/transformed/recyclerview-1.3.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f408bc92bdf6de2128f6e64402179ba/transformed/viewpager2-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/a777394843db98ea25202f74acab99ff/transformed/fragment-1.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/5836c89792f394e3ef48af2e4791aa01/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a1e2740e90462d2150d213a10df738c5/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/73d592fd8aec3328dfa5b3343c1f0bab/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6202ea47b255418283c875ee282c113/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/bf9635e1b29fa723b253243f81f3fd7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f8c9da14d5ee22c4481ec9628b2b7f2/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/069821d9b0855b38f93f4cbbb3cbf381/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/b4a9e33eeb97ea0801fa5a6cb70c312f/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0e66402096db9f0902b573d57763ca3f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4184f8a5c95f7b5ab27c3f0e46d3af1d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c92fbade034298c51e6cfc182d28fe0/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c556b77a0d181f5fc15bcb39f265eb8/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5058f0ac2d59a3e9c7b679a84365ea17/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d4c8f555f8a4c522179086133c92b002/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/67b0db93f12a535aae3f86ec7690cdc7/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/29dc8e8fe113d3a8ab4f381d3c53b17d/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/79f3fbe2df794c1639ddb58e56f5055e/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d6747033b502f89d0b2a0feafa688056/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/5e0ca2edf19e50a8cd8555ab6531bbb4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/dcd54a500b96454e2ad376c9cc06808c/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/998ea0e576c6ff5b3295631b9f1a9547/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0a4571aec15aab59987cbbcc630db98d/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/239d30130a3463b5caa09e7ed1be99af/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/09db86ae234c2c9585343105660cdae0/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c536b3eedc793f9e58ee1ba43f26daa0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/44213ecc34596d6604f70c5de79f3ec8/transformed/core-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/65b3dc739b4b776ae5015af2f3035ab1/transformed/room-ktx-2.7.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/eee1f652b15317ed69b0862e9b28832b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4739015fd3a512e416bd86bc6df4a873/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8bebaea93476470f0f1fc9ca3ca05e16/transformed/sqlite-framework-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e265d88481af87dbad044ccfb7915a8b/transformed/sqlite-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e9a0755ecf31ea124da541200f7c38ff/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/982a6fab25850043405f7d74987ad358/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/679b33b1507a99d3ad1c53e70a0d3cfe/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/af4a6a2ea70814e3c85719624757b261/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f514151e992238176b895c9dc6ea3cc9/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/61f9cd2685c43479b5ebf01a4d3c6fdc/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1d8567ac74a10c8ffc300238511e66a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/849e61e4d6b7ee700cb7658c185123a0/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 	package
 		INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -65,26 +69,28 @@ MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/tr
 application
 ADDED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:5:5-24:19
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from [com.google.android.material:material:1.11.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/445b83d05d84739aa5edcf75cfc9b2f5/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.11.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/445b83d05d84739aa5edcf75cfc9b2f5/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/22281245dfbb12904e6bc2470025e9e8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/22281245dfbb12904e6bc2470025e9e8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/00a1938df214e1e1ef820953f343807a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/00a1938df214e1e1ef820953f343807a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.material:material:1.10.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7a6f6c445b6bc21e1df88fd79790e080/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.10.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7a6f6c445b6bc21e1df88fd79790e080/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/3f7abffa21ef2a9a5b8b3cdcccd1c78f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/3f7abffa21ef2a9a5b8b3cdcccd1c78f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4739015fd3a512e416bd86bc6df4a873/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4739015fd3a512e416bd86bc6df4a873/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
 		INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
@@ -123,193 +129,211 @@ uses-sdk
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
 INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.11.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/445b83d05d84739aa5edcf75cfc9b2f5/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.11.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/445b83d05d84739aa5edcf75cfc9b2f5/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/22281245dfbb12904e6bc2470025e9e8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/22281245dfbb12904e6bc2470025e9e8/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c57f068a09875c3fe03a8fcfb6dcfbe/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c57f068a09875c3fe03a8fcfb6dcfbe/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/470afed79e2677b7f8fad6da547b9d85/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/470afed79e2677b7f8fad6da547b9d85/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/e375e18badade3a5595f091c57e2072f/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/e375e18badade3a5595f091c57e2072f/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f05440ddc84e229b9b3b14b57415eb78/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f05440ddc84e229b9b3b14b57415eb78/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/c378bee4f7219b678f62748c097d285a/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/c378bee4f7219b678f62748c097d285a/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/09d22bad14ed2ab31bfdd25afa845b75/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/09d22bad14ed2ab31bfdd25afa845b75/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0073ccea224c6e7072265ae0d8c8b75e/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0073ccea224c6e7072265ae0d8c8b75e/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a838cfc628cd980e47794c0784854e26/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a838cfc628cd980e47794c0784854e26/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e24fb0c54d846e5968f846ead7faa6b1/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e24fb0c54d846e5968f846ead7faa6b1/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/1fe7157968fd356804e2814ad7996472/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/1fe7157968fd356804e2814ad7996472/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5ba6b8ee5e93d063b10ec41e4c5fb44c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5ba6b8ee5e93d063b10ec41e4c5fb44c/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8eb373daacceb84feebe2917d152ee09/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8eb373daacceb84feebe2917d152ee09/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/293228347540de3a2e7e9fff36f8fd38/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/293228347540de3a2e7e9fff36f8fd38/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d44fbafaac8a93ff2a20695cef009765/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d44fbafaac8a93ff2a20695cef009765/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/9227d4a5e4f25a007c9f7982de01fe4f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/9227d4a5e4f25a007c9f7982de01fe4f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7da9f15197a8eceb065eaeb57be875e6/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7da9f15197a8eceb065eaeb57be875e6/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/cdfaad2c63b340f00cd7f95218a8c655/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/cdfaad2c63b340f00cd7f95218a8c655/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8c3b4d1a48dec5c66b82b99de415e0d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8c3b4d1a48dec5c66b82b99de415e0d9/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0f78e78c14b8472eb77aff2fa5176f05/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0f78e78c14b8472eb77aff2fa5176f05/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/428f86f013344bb5e215c4edbaafcae0/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/428f86f013344bb5e215c4edbaafcae0/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/f56befceb8c3cbcef51c4b2c719e0b25/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/f56befceb8c3cbcef51c4b2c719e0b25/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/374f1582a2fbb386e2859803e17d766f/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/374f1582a2fbb386e2859803e17d766f/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/7bb3df08a838eecbf93f6025520d76ba/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/7bb3df08a838eecbf93f6025520d76ba/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0de3b2a651cfd11db5205539d62aa5e4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0de3b2a651cfd11db5205539d62aa5e4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4149fc98bd1200445b013136bab8a3cf/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4149fc98bd1200445b013136bab8a3cf/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/a562129b2366180fbb78cf4f7c053aa9/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/a562129b2366180fbb78cf4f7c053aa9/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/3b7f0e80e142305d0aabb1fec88401db/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/3b7f0e80e142305d0aabb1fec88401db/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6c77fdfcee3dc09ebb35af775c28142/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6c77fdfcee3dc09ebb35af775c28142/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/60fae34b13b86ac2de346ed4f5e9cd07/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/60fae34b13b86ac2de346ed4f5e9cd07/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4f88ba7e51366257b49cf3bc1c54e4e6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4f88ba7e51366257b49cf3bc1c54e4e6/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/590194e6939d5ebf83c1cfd6a73a168a/transformed/core-ktx-1.10.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/590194e6939d5ebf83c1cfd6a73a168a/transformed/core-ktx-1.10.1/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/3fb72b9df4306d986f467630a5abb817/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/3fb72b9df4306d986f467630a5abb817/transformed/annotation-experimental-1.4.0/AndroidManifest.xml:5:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/6a63bf4586721cfc42b11d09dba01caa/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/6a63bf4586721cfc42b11d09dba01caa/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4e0f89cba0c7d2942d00dcca6d29090a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4e0f89cba0c7d2942d00dcca6d29090a/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/00a1938df214e1e1ef820953f343807a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/00a1938df214e1e1ef820953f343807a/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c4291b07d0a28b8d8cd03deeaf4fcf8/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c4291b07d0a28b8d8cd03deeaf4fcf8/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/28c90d1031d8db96af73876582eec3d4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/28c90d1031d8db96af73876582eec3d4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4133f6abef0bdcfafa9addd35afc84f9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4133f6abef0bdcfafa9addd35afc84f9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2a1215ef4bae1d354790bdafdb9202d5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2a1215ef4bae1d354790bdafdb9202d5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1db87d474957b89372dde3f9df5ddf1f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1db87d474957b89372dde3f9df5ddf1f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/04e167c92d0cbb52164dd1774c2789cb/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/04e167c92d0cbb52164dd1774c2789cb/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7a6f6c445b6bc21e1df88fd79790e080/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.10.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7a6f6c445b6bc21e1df88fd79790e080/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/3f7abffa21ef2a9a5b8b3cdcccd1c78f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/endviyou/.gradle/caches/9.6.0/transforms/3f7abffa21ef2a9a5b8b3cdcccd1c78f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/73473debf2bc3ae85e7b398a6cb71678/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/73473debf2bc3ae85e7b398a6cb71678/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ca1fbba643946172f0eb441161d4de17/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ca1fbba643946172f0eb441161d4de17/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0dfa182e96a195b549153a6dc0d7ffe3/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0dfa182e96a195b549153a6dc0d7ffe3/transformed/recyclerview-1.3.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f408bc92bdf6de2128f6e64402179ba/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f408bc92bdf6de2128f6e64402179ba/transformed/viewpager2-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/a777394843db98ea25202f74acab99ff/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/a777394843db98ea25202f74acab99ff/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/5836c89792f394e3ef48af2e4791aa01/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/endviyou/.gradle/caches/9.6.0/transforms/5836c89792f394e3ef48af2e4791aa01/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a1e2740e90462d2150d213a10df738c5/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/a1e2740e90462d2150d213a10df738c5/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/73d592fd8aec3328dfa5b3343c1f0bab/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/73d592fd8aec3328dfa5b3343c1f0bab/transformed/activity-ktx-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6202ea47b255418283c875ee282c113/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c6202ea47b255418283c875ee282c113/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/bf9635e1b29fa723b253243f81f3fd7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/bf9635e1b29fa723b253243f81f3fd7b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f8c9da14d5ee22c4481ec9628b2b7f2/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8f8c9da14d5ee22c4481ec9628b2b7f2/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/069821d9b0855b38f93f4cbbb3cbf381/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/069821d9b0855b38f93f4cbbb3cbf381/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/b4a9e33eeb97ea0801fa5a6cb70c312f/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/b4a9e33eeb97ea0801fa5a6cb70c312f/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0e66402096db9f0902b573d57763ca3f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0e66402096db9f0902b573d57763ca3f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4184f8a5c95f7b5ab27c3f0e46d3af1d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4184f8a5c95f7b5ab27c3f0e46d3af1d/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c92fbade034298c51e6cfc182d28fe0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/4c92fbade034298c51e6cfc182d28fe0/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c556b77a0d181f5fc15bcb39f265eb8/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/2c556b77a0d181f5fc15bcb39f265eb8/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5058f0ac2d59a3e9c7b679a84365ea17/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/5058f0ac2d59a3e9c7b679a84365ea17/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d4c8f555f8a4c522179086133c92b002/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d4c8f555f8a4c522179086133c92b002/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/67b0db93f12a535aae3f86ec7690cdc7/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/67b0db93f12a535aae3f86ec7690cdc7/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/29dc8e8fe113d3a8ab4f381d3c53b17d/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/29dc8e8fe113d3a8ab4f381d3c53b17d/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/79f3fbe2df794c1639ddb58e56f5055e/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/79f3fbe2df794c1639ddb58e56f5055e/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d6747033b502f89d0b2a0feafa688056/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d6747033b502f89d0b2a0feafa688056/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/5e0ca2edf19e50a8cd8555ab6531bbb4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/5e0ca2edf19e50a8cd8555ab6531bbb4/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/dcd54a500b96454e2ad376c9cc06808c/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/dcd54a500b96454e2ad376c9cc06808c/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/998ea0e576c6ff5b3295631b9f1a9547/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/998ea0e576c6ff5b3295631b9f1a9547/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0a4571aec15aab59987cbbcc630db98d/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/0a4571aec15aab59987cbbcc630db98d/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/239d30130a3463b5caa09e7ed1be99af/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/239d30130a3463b5caa09e7ed1be99af/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/09db86ae234c2c9585343105660cdae0/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/09db86ae234c2c9585343105660cdae0/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c536b3eedc793f9e58ee1ba43f26daa0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/c536b3eedc793f9e58ee1ba43f26daa0/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/44213ecc34596d6604f70c5de79f3ec8/transformed/core-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/44213ecc34596d6604f70c5de79f3ec8/transformed/core-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/65b3dc739b4b776ae5015af2f3035ab1/transformed/room-ktx-2.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/65b3dc739b4b776ae5015af2f3035ab1/transformed/room-ktx-2.7.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/eee1f652b15317ed69b0862e9b28832b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/eee1f652b15317ed69b0862e9b28832b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4739015fd3a512e416bd86bc6df4a873/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/4739015fd3a512e416bd86bc6df4a873/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8bebaea93476470f0f1fc9ca3ca05e16/transformed/sqlite-framework-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/8bebaea93476470f0f1fc9ca3ca05e16/transformed/sqlite-framework-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e265d88481af87dbad044ccfb7915a8b/transformed/sqlite-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-android:2.5.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e265d88481af87dbad044ccfb7915a8b/transformed/sqlite-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e9a0755ecf31ea124da541200f7c38ff/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e9a0755ecf31ea124da541200f7c38ff/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/982a6fab25850043405f7d74987ad358/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/982a6fab25850043405f7d74987ad358/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/679b33b1507a99d3ad1c53e70a0d3cfe/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/679b33b1507a99d3ad1c53e70a0d3cfe/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/af4a6a2ea70814e3c85719624757b261/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/af4a6a2ea70814e3c85719624757b261/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f514151e992238176b895c9dc6ea3cc9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/f514151e992238176b895c9dc6ea3cc9/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/61f9cd2685c43479b5ebf01a4d3c6fdc/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/61f9cd2685c43479b5ebf01a4d3c6fdc/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1d8567ac74a10c8ffc300238511e66a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/1d8567ac74a10c8ffc300238511e66a6/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/849e61e4d6b7ee700cb7658c185123a0/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/849e61e4d6b7ee700cb7658c185123a0/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
 		INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /Users/endviyou/Desktop/study/bugs/app/src/main/AndroidManifest.xml
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/ac959685e649d1b1af0f9fd5f2857f42/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/54cb5efad870929d2d37d5fe559e5c95/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/7c887feed09b8526ab1cd796cb909cdb/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/0ef2663574c685146110c3d7d5f5004e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
 permission#com.endviyou.bugs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
 uses-permission#com.endviyou.bugs.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/c1bb2aa9a7d7101f3a12d6ab64574ba3/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.10.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/d2f5fc3bb70eab2b621f6c6f444321ac/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/9ac4f7da04949b6a8e4907df3f880456/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
-meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/8b413ada2d43481ccc59647bcf8fdefd/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:24:9-28:63
 	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+		ADDED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:28:13-60
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+		ADDED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:26:13-43
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+		ADDED from [androidx.room:room-runtime-android:2.7.1] /Users/endviyou/.gradle/caches/9.6.0/transforms/6563ffb07763fe5d2e8b7911f1e3bcef/transformed/room-runtime-release/AndroidManifest.xml:25:13-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/e748bd1849e4bf66e4076478da760b09/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/endviyou/.gradle/caches/9.6.0/transforms/d8b5d7570e779d7e92b993f1bf2225f5/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
