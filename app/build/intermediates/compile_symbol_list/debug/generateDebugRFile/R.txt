@@ -46,6 +46,7 @@ int id seekBarMaxBugs 0x0
 int id seekBarRoundDuration 0x0
 int id seekBarSpeed 0x0
 int id spinnerCourse 0x0
+int id spinnerDifficulty 0x0
 int id tabLayout 0x0
 int id tvAuthorName 0x0
 int id tvBonusIntervalValue 0x0

@@ -3498,6 +3498,7 @@ int id south 0x7f0901a6
 int id spacer 0x7f0901a7
 int id special_effects_controller_view_tag 0x7f0901a8
 int id spinnerCourse 0x7f0901a9
+int id spinnerDifficulty 0x7f090215
 int id spline 0x7f0901aa
 int id split_action_bar 0x7f0901ab
 int id spread 0x7f0901ac

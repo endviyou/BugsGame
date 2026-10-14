@@ -47,6 +47,7 @@ id seekBarMaxBugs
 id seekBarRoundDuration
 id seekBarSpeed
 id spinnerCourse
+id spinnerDifficulty
 id tabLayout
 id tvAuthorName
 id tvBonusIntervalValue

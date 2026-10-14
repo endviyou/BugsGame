@@ -21,7 +21,7 @@ interface BestRecordDao {
     suspend fun getAvailableDifficulties(): List<Int>
 
     @Query("SELECT * FROM records ORDER BY score DESC LIMIT 10")
-    suspend fun getTop10(): List<BestRecord>   // ← ЭТО ДОБАВИТЬ
+    suspend fun getTop10(): List<BestRecord>
 
     @Query("SELECT * FROM records ORDER BY difficulty ASC, score DESC")
     suspend fun getAllRecords(): List<BestRecord>
