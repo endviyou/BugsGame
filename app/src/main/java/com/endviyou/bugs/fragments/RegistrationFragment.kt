@@ -151,7 +151,6 @@ class RegistrationFragment : Fragment() {
         val etFullName = view?.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etFullName)
         val fullName = etFullName?.text.toString().trim()
 
-        // ===== ВАЛИДАЦИЯ =====
 
         // 1. Проверка на пустоту
         if (fullName.isEmpty()) {
@@ -177,7 +176,6 @@ class RegistrationFragment : Fragment() {
             return
         }
 
-        // ===== ПРОВЕРКА УНИКАЛЬНОСТИ ЧЕРЕЗ ROOM =====
         CoroutineScope(Dispatchers.IO).launch {
             val database = AppDatabase.getInstance(requireContext())
             val dao = database.playerScoreDao()
@@ -190,7 +188,6 @@ class RegistrationFragment : Fragment() {
                     return@withContext
                 }
 
-                // ===== ВСЁ ОК — СОХРАНЯЕМ =====
                 proceedWithSave(fullName, etFullName)
             }
         }
@@ -290,17 +287,20 @@ class RegistrationFragment : Fragment() {
 
         // Сохраняем ник в SharedPreferences
         val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
-        prefs.edit().putString("nickname", fullName).apply()
+        prefs.edit()
+            .putString("nickname", fullName)
+            .putString("gender", gender)
+            .putString("course", course)
+            .putString("zodiac", zodiac)
+            .apply()
 
-        // ↓↓↓ ДОБАВЛЕНО: сложность → настройки игры ↓↓↓
-        val difficulty = seekBarDifficulty.progress  // 0-10
-
+        // Сложность  настройки игры
+        val difficulty = seekBarDifficulty.progress
         val gamePrefs = requireContext().getSharedPreferences("game_settings", Context.MODE_PRIVATE)
         gamePrefs.edit()
-            .putInt("speed", difficulty.coerceAtLeast(1))           // скорость 1-10
-            .putInt("max_bugs", (difficulty * 2).coerceAtLeast(1))  // жуков 1-20
+            .putInt("speed", difficulty.coerceAtLeast(1))
+            .putInt("max_bugs", (difficulty * 2).coerceAtLeast(1))
             .apply()
-        // ↑↑↑ КОНЕЦ ДОБАВЛЕНИЯ ↑↑↑
 
         val player = Player(
             fullName = fullName,

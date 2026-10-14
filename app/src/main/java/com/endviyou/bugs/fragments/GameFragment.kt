@@ -21,6 +21,7 @@ import kotlinx.coroutines.withContext
 import com.endviyou.bugs.network.GoldRepository
 import com.endviyou.bugs.viewmodels.GameViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import com.endviyou.bugs.database.BestRecord
 
 class GameFragment : Fragment() {
 
@@ -77,9 +78,8 @@ class GameFragment : Fragment() {
             }
         }
 
-        // ↓↓↓ ВОССТАНОВЛЕНИЕ ПОСЛЕ ПОВОРОТА ↓↓↓
+        // ВОССТАНОВЛЕНИЕ ПОСЛЕ ПОВОРОТА
         if (gameViewModel.isGameRunning) {
-            // Игра шла — НЕ запускаем View, показываем состояние "Пауза"
             gameViewModel.stopGame()
         }
         // Показываем текущее время
@@ -172,15 +172,19 @@ class GameFragment : Fragment() {
 
         val prefs = requireContext().getSharedPreferences("game_settings", Context.MODE_PRIVATE)
         val difficulty = prefs.getInt("speed", 5)
-        val course = "4 курс"
-        val gender = "Женский"
-        val zodiac = "Скорпион"
+
+        val userPrefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
+        val course = userPrefs.getString("course", "Не указан") ?: "Не указан"
+        val gender = userPrefs.getString("gender", "Не указан") ?: "Не указан"
+        val zodiac = userPrefs.getString("zodiac", "Не указан") ?: "Не указан"
 
         val database = AppDatabase.getInstance(requireContext())
-        val dao = database.playerScoreDao()
+        val playerScoreDao = database.playerScoreDao()
+        val bestRecordDao = database.bestRecordDao()
 
         CoroutineScope(Dispatchers.IO).launch {
-            dao.insert(
+            // 1. Всегда сохраняем в историю
+            playerScoreDao.insert(
                 PlayerScore(
                     nickname = nickname,
                     score = score,
@@ -190,12 +194,27 @@ class GameFragment : Fragment() {
                     zodiacSign = zodiac
                 )
             )
+
+            // 2. Логика рекорда: обновить, если лучше
+            val existing = bestRecordDao.getRecord(nickname, difficulty)
+            if (existing == null || score > existing.score) {
+                bestRecordDao.insert(
+                    BestRecord(
+                        nickname = nickname,
+                        difficulty = difficulty,
+                        score = score,
+                        course = course,
+                        gender = gender,
+                        zodiacSign = zodiac
+                    )
+                )
+            }
+
             withContext(Dispatchers.Main) {
                 Toast.makeText(requireContext(), "Результат сохранён!", Toast.LENGTH_SHORT).show()
             }
         }
     }
-
     private fun getCurrentNickname(): String? {
         val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         return prefs.getString("nickname", null)

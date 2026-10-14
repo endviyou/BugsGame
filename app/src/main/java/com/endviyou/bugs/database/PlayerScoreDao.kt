@@ -4,9 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
-/**
- * DAO — интерфейс для работы с таблицей player_scores
- */
 @Dao
 interface PlayerScoreDao {
 
@@ -17,10 +14,20 @@ interface PlayerScoreDao {
     suspend fun insert(playerScore: PlayerScore)
 
     /**
-     * Получить все записи (для вкладки Рекорды)
-     * Сортировка: сначала с большими очками
+     * Получить все записи
      */
-    @Query("SELECT * FROM player_scores ORDER BY score DESC")
+    @Query("""
+    SELECT * FROM player_scores 
+    WHERE id IN (
+        SELECT id FROM player_scores 
+        WHERE (nickname, score) IN (
+            SELECT nickname, MAX(score) 
+            FROM player_scores 
+            GROUP BY nickname
+        )
+    )
+    ORDER BY score DESC
+""")
     suspend fun getAllScores(): List<PlayerScore>
 
     /**
@@ -31,7 +38,7 @@ interface PlayerScoreDao {
 
     /**
      * Получить уникальных игроков (последняя запись каждого)
-     * Для диалога "Выбрать игрока"
+     * Для окошка лукошка "Выбрать игрока"
      */
     @Query("""
         SELECT * FROM player_scores 

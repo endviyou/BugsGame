@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.endviyou.bugs.database.BestRecord
 import com.endviyou.bugs.R
-import com.endviyou.bugs.database.PlayerScore
 
-class RecordsAdapter(private val records: List<PlayerScore>) :
-    RecyclerView.Adapter<RecordsAdapter.RecordViewHolder>() {
+class RecordsAdapter(private val records: List<BestRecord>) :
+    RecyclerView.Adapter<RecordsAdapter.RecordViewHolder>()  {
 
     class RecordViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvRank: TextView = view.findViewById(R.id.tvRank)
@@ -26,7 +26,15 @@ class RecordsAdapter(private val records: List<PlayerScore>) :
 
     override fun onBindViewHolder(holder: RecordViewHolder, position: Int) {
         val record = records[position]
-        holder.tvRank.text = "${position + 1}"
+
+        // Медали для топ-3
+        holder.tvRank.text = when (position) {
+            0 -> "1"
+            1 -> "2"
+            2 -> "3"
+            else -> "${position + 1}"
+        }
+
         holder.tvNickname.text = record.nickname
         holder.tvDetails.text = "Сложность ${record.difficulty} · ${record.course}"
         holder.tvScore.text = "${record.score}"

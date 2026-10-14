@@ -38,7 +38,6 @@ class RecordsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        // Перезагружаем при каждом показе вкладки
         if (::recyclerView.isInitialized) {
             loadRecords()
         }
@@ -46,13 +45,13 @@ class RecordsFragment : Fragment() {
 
     private fun loadRecords() {
         val database = AppDatabase.getInstance(requireContext())
-        val dao = database.playerScoreDao()
+        val bestRecordDao = database.bestRecordDao()
 
         CoroutineScope(Dispatchers.IO).launch {
-            val scores = dao.getAllScores()
+            val records = bestRecordDao.getTop10()
 
             withContext(Dispatchers.Main) {
-                adapter = RecordsAdapter(scores)
+                adapter = RecordsAdapter(records)
                 recyclerView.adapter = adapter
             }
         }

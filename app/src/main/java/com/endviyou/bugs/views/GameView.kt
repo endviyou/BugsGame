@@ -20,11 +20,6 @@ import com.endviyou.bugs.models.Bug
 import com.endviyou.bugs.models.BugType
 import kotlin.random.Random
 
-/**
- * Кастомная View — игровое поле
- * Рисует жуков, обрабатывает нажатия, показывает всплывающие очки,
- * поддерживает акселерометр (гравитацию), звук, бонус ⭐ и золотого таракана 🥇
- */
 class GameView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -55,7 +50,7 @@ class GameView @JvmOverloads constructor(
     private var gravityModeEnabled = false
     private var gravityTimer = 0
 
-    // ===== БОНУС ⭐ (15 секунд) =====
+    // ===== БОНУС (15 секунд) =====
     private var bonusX = 0f
     private var bonusY = 0f
     private val bonusSize = 60f
@@ -64,7 +59,7 @@ class GameView @JvmOverloads constructor(
     private val bonusIntervalFrames = 15 * 60   // 15 сек × 60 FPS
     private val gravityDurationFrames = 5 * 60  // 5 секунд
 
-    // ===== ЗОЛОТОЙ ТАРАКАН 🥇 (20 секунд) =====
+    // ===== ЗОЛОТОЙ ТАРАКАН  (20 секунд) =====
     private val goldenBugIntervalFrames = 20 * 60   // 20 сек × 60 FPS
     private var goldenBugTimer = 0
     private var currentGoldPrice: Double = 0.0
@@ -128,7 +123,6 @@ class GameView @JvmOverloads constructor(
         var offsetY: Float = 0f
     )
 
-    // ===== ИГРОВОЙ ЦИКЛ =====
 
     private val gameLoop = object : Runnable {
         override fun run() {
@@ -152,14 +146,14 @@ class GameView @JvmOverloads constructor(
             }
         }
 
-        // Обновляем таймер бонуса ⭐ (15 сек)
+        // апдт таймер бонуса  (15 сек)
         bonusTimer++
         if (!bonusVisible && bonusTimer >= bonusIntervalFrames) {
             spawnBonus()
             bonusTimer = 0
         }
 
-        // Обновляем таймер золотого таракана 🥇 (20 сек)
+        // апдейт таймер золотого таракана  (20 сек)
         goldenBugTimer++
         if (goldenBugTimer >= goldenBugIntervalFrames) {
             val hasGolden = bugs.any { it.type == BugType.BONUS }
@@ -198,10 +192,10 @@ class GameView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        // Рисуем жуков (включая золотого таракана 🥇)
+        // Рисуем жуков (включая золотого таракана )
         bugs.forEach { drawBug(canvas, it) }
 
-        // Рисуем бонус ⭐
+        // Рисуем бонус
         if (bonusVisible) {
             drawBonus(canvas)
         }
@@ -224,23 +218,20 @@ class GameView @JvmOverloads constructor(
             paint.textAlign = Paint.Align.CENTER
             paint.isFakeBoldText = true
             paint.style = Paint.Style.FILL
-            canvas.drawText("🌀 ГРАВИТАЦИЯ ${gravityTimer / 60}с", width / 2f, 80f, paint)
+            canvas.drawText(" ДЕВОЧКИ, ВЫ УПАЛИ ${gravityTimer / 60}с", width / 2f, 80f, paint)
         }
     }
 
     private fun drawBonus(canvas: Canvas) {
-        // Золотой круг
         paint.color = Color.rgb(255, 215, 0)
         paint.style = Paint.Style.FILL
         canvas.drawCircle(bonusX, bonusY, bonusSize, paint)
 
-        // Оранжевая обводка
         paint.color = Color.rgb(255, 165, 0)
         paint.style = Paint.Style.STROKE
         paint.strokeWidth = 6f
         canvas.drawCircle(bonusX, bonusY, bonusSize, paint)
 
-        // Звёздочка
         paint.color = Color.WHITE
         paint.style = Paint.Style.FILL
         paint.textSize = bonusSize * 1.2f
@@ -384,7 +375,6 @@ class GameView @JvmOverloads constructor(
             paint
         )
 
-        // 9. ЭМОДЗИ 🥇 ДЛЯ ЗОЛОТОГО ТАРАКАНА
         if (bug.type == BugType.BONUS) {
             paint.color = Color.WHITE
             paint.textSize = size * 0.8f
@@ -394,7 +384,6 @@ class GameView @JvmOverloads constructor(
         }
     }
 
-    // ===== БОНУС =====
 
     private fun spawnBonus() {
         if (width == 0 || height == 0) return
@@ -403,7 +392,6 @@ class GameView @JvmOverloads constructor(
         bonusVisible = true
     }
 
-    // ===== ЗОЛОТОЙ ТАРАКАН =====
 
     private fun spawnGoldenBug() {
         if (width == 0 || height == 0) return
@@ -438,8 +426,8 @@ class GameView @JvmOverloads constructor(
             PopupText(
                 x = width / 2f,
                 y = height / 2f,
-                text = "🌀 ГРАВИТАЦИЯ!",
-                color = Color.rgb(255, 215, 0)
+                text = "ДЕВОЧКИ, ВЫ УПАЛИ!",
+                color = Color.rgb(0, 0, 0)
             )
         )
     }
@@ -451,7 +439,7 @@ class GameView @JvmOverloads constructor(
             val touchX = event.x
             val touchY = event.y
 
-            // Бонус ⭐
+            // Бонус
             if (bonusVisible) {
                 val dx = touchX - bonusX
                 val dy = touchY - bonusY

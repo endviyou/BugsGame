@@ -49,7 +49,19 @@ public class PlayerScoreDao_Impl(
   }
 
   public override suspend fun getAllScores(): List<PlayerScore> {
-    val _sql: String = "SELECT * FROM player_scores ORDER BY score DESC"
+    val _sql: String = """
+        |
+        |    SELECT * FROM player_scores 
+        |    WHERE id IN (
+        |        SELECT id FROM player_scores 
+        |        WHERE (nickname, score) IN (
+        |            SELECT nickname, MAX(score) 
+        |            FROM player_scores 
+        |            GROUP BY nickname
+        |        )
+        |    )
+        |    ORDER BY score DESC
+        |""".trimMargin()
     return performSuspending(__db, true, false) { _connection ->
       val _stmt: SQLiteStatement = _connection.prepare(_sql)
       try {
