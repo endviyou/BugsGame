@@ -66,6 +66,7 @@ id tvWidgetGold
 id tvWidgetPrice
 id viewPager
 id webViewRules
+id widgetRoot
 layout activity_main
 layout fragment_authors
 layout fragment_game

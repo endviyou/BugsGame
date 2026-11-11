@@ -195,7 +195,7 @@ class GameFragment : Fragment() {
                 )
             )
 
-            // 2. Логика рекорда: обновить, если лучше
+            // 2.  рекорд: обновить, если лучше
             val existing = bestRecordDao.getRecord(nickname, difficulty)
             if (existing == null || score > existing.score) {
                 bestRecordDao.insert(

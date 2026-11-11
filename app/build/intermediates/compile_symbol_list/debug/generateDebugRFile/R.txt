@@ -64,6 +64,7 @@ int id tvWidgetGold 0x0
 int id tvWidgetPrice 0x0
 int id viewPager 0x0
 int id webViewRules 0x0
+int id widgetRoot 0x0
 int layout activity_main 0x0
 int layout fragment_authors 0x0
 int layout fragment_game 0x0

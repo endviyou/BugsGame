@@ -30,16 +30,11 @@ interface PlayerScoreDao {
 """)
     suspend fun getAllScores(): List<PlayerScore>
 
-    /**
-     * Проверить, существует ли игрок с таким ником
-     */
     @Query("SELECT COUNT(*) FROM player_scores WHERE nickname = :nickname")
     suspend fun isNicknameExists(nickname: String): Int
 
-    /**
-     * Получить уникальных игроков (последняя запись каждого)
-     * Для окошка лукошка "Выбрать игрока"
-     */
+
+
     @Query("""
         SELECT * FROM player_scores 
         WHERE id IN (
@@ -49,9 +44,6 @@ interface PlayerScoreDao {
     """)
     suspend fun getUniquePlayers(): List<PlayerScore>
 
-    /**
-     * Получить лучший результат игрока
-     */
     @Query("SELECT MAX(score) FROM player_scores WHERE nickname = :nickname")
     suspend fun getBestScore(nickname: String): Int?
 }

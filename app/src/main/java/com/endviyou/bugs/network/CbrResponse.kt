@@ -5,18 +5,13 @@ import org.simpleframework.xml.Root
 import org.simpleframework.xml.Attribute
 import org.simpleframework.xml.Element
 
-/**
- * Корневой элемент XML от ЦБ
- */
+
 @Root(name = "Metall", strict = false)
 data class CbrResponse(
     @field:ElementList(name = "Record", inline = true, required = false)
     var records: MutableList<MetalRecord> = mutableListOf()
 )
 
-/**
- * Одна запись (один металл)
- */
 @Root(name = "Record", strict = false)
 data class MetalRecord(
     @field:Element(name = "Buy", required = false)

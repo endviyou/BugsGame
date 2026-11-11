@@ -46,11 +46,7 @@ class RecordsFragment : Fragment() {
         loadRecords(0)
     }
 
-    /**
-     * Настройка Spinner со сложностями
-     */
     private fun setupSpinner() {
-        // Пункты: "Все" + сложности 1-10
         val items = mutableListOf("Все сложности")
         for (i in 1..10) {
             items.add("Сложность $i")
@@ -82,9 +78,6 @@ class RecordsFragment : Fragment() {
         }
     }
 
-    /**
-     * Загрузка рекордов с фильтром по сложности
-     */
     private fun loadRecords(difficulty: Int) {
         val database = AppDatabase.getInstance(requireContext())
         val bestRecordDao = database.bestRecordDao()
