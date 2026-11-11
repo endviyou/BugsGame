@@ -2,7 +2,6 @@ package com.endviyou.bugs.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,7 @@ import com.endviyou.bugs.R
 import com.endviyou.bugs.views.GameView
 import com.endviyou.bugs.database.AppDatabase
 import com.endviyou.bugs.database.PlayerScore
+import com.endviyou.bugs.database.BestRecord
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,7 +21,6 @@ import kotlinx.coroutines.withContext
 import com.endviyou.bugs.network.GoldRepository
 import com.endviyou.bugs.viewmodels.GameViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import com.endviyou.bugs.database.BestRecord
 
 class GameFragment : Fragment() {
 
@@ -31,8 +30,8 @@ class GameFragment : Fragment() {
     private lateinit var btnStartStop: Button
 
     private var roundDuration = 60
-    private var countDownTimer: CountDownTimer? = null
 
+    // ViewModel теперь хранит и таймер, и состояние
     private val gameViewModel: GameViewModel by viewModel()
 
     override fun onCreateView(
@@ -62,34 +61,15 @@ class GameFragment : Fragment() {
             tvScore.text = "Очки: $score"
         }
 
-        // ↓↓↓ ЛОГИКА КНОПКИ ↓↓↓
-        btnStartStop.setOnClickListener {
-            if (gameViewModel.isGameRunning) {
-                // Пауза
-                stopGame()
-            } else {
-                // Игра шла до поворота и есть оставшееся время? Продолжаем.
-                if (gameViewModel.secondsLeft in 1 until gameViewModel.roundDuration) {
-                    continueGame()
-                } else {
-                    // Новая игра
-                    startGame()
-                }
-            }
-        }
+        setupButton()
 
-        // ВОССТАНОВЛЕНИЕ ПОСЛЕ ПОВОРОТА
-        if (gameViewModel.isGameRunning) {
-            gameViewModel.stopGame()
+        // ВАЖНО: Сначала подписываемся, потом запускаем
+        setupObservers()
+
+        // Если игра шла до поворота — принудительно запускаем
+        if (gameViewModel.isGameRunning.value == true) {
+            gameView.startGame()
         }
-        // Показываем текущее время
-        tvTimer.text = "${gameViewModel.secondsLeft}"
-        btnStartStop.text = if (gameViewModel.secondsLeft in 1 until gameViewModel.roundDuration) {
-            "Продолжить"
-        } else {
-            "Старт"
-        }
-        // ↑↑↑ КОНЕЦ ↑↑↑
 
         CoroutineScope(Dispatchers.IO).launch {
             val price = GoldRepository.getGoldPrice()
@@ -99,10 +79,56 @@ class GameFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        if (::gameView.isInitialized) {
-            loadSettings()
+    private fun setupObservers() {
+        // Таймер
+        gameViewModel.timeLeft.observe(viewLifecycleOwner) { seconds ->
+            tvTimer.text = "$seconds"
+        }
+
+        // Состояние игры
+        gameViewModel.isGameRunning.observe(viewLifecycleOwner) { isRunning ->
+            if (isRunning) {
+                btnStartStop.text = "Стоп"
+                // Запускаем жуков, если они еще не бегут
+                if (::gameView.isInitialized && !gameView.isRunning) {
+                    gameView.startGame()
+                }
+            } else {
+                btnStartStop.text = if (gameViewModel.secondsLeft in 1 until gameViewModel.roundDuration) {
+                    "Продолжить"
+                } else {
+                    "Старт"
+                }
+                if (::gameView.isInitialized && gameView.isRunning) {
+                    gameView.stopGame()
+                }
+            }
+        }
+
+        // Конец игры
+        gameViewModel.gameFinished.observe(viewLifecycleOwner) { finished ->
+            if (finished) {
+                Toast.makeText(requireContext(), "Раунд окончен!", Toast.LENGTH_LONG).show()
+                saveScoreToDatabase()
+                gameView.setScore(0)
+                tvScore.text = "Очки: 0"
+                gameViewModel.resetGame()
+            }
+        }
+    }
+
+    private fun setupButton() {
+        btnStartStop.setOnClickListener {
+            if (gameViewModel.isGameRunning.value == true) {
+                gameViewModel.stopGame() // Пауза
+            } else {
+                // Если время осталось (была пауза), продолжаем. Иначе — новая игра.
+                if (gameViewModel.secondsLeft in 1 until gameViewModel.roundDuration) {
+                    gameViewModel.continueGame()
+                } else {
+                    gameViewModel.startNewGame(roundDuration)
+                }
+            }
         }
     }
 
@@ -113,57 +139,6 @@ class GameFragment : Fragment() {
         roundDuration = prefs.getInt("round_duration", 60)
 
         gameView.applySettings(speed, maxBugs)
-    }
-
-    private fun startGame() {
-        loadSettings()
-
-        gameViewModel.startNewGame(roundDuration)
-
-        gameView.setScore(0)
-        tvScore.text = "Очки: 0"
-        tvTimer.text = "$roundDuration"
-
-        btnStartStop.text = "Стоп"
-        gameView.startGame()
-        startCountDownTimer(roundDuration * 1000L)
-    }
-
-    private fun continueGame() {
-        gameViewModel.continueGame()
-        btnStartStop.text = "Стоп"
-        gameView.startGame()  // запускаем жуков заново
-        // Таймер продолжает с оставшегося времени
-        startCountDownTimer(gameViewModel.secondsLeft * 1000L)
-    }
-
-    private fun startCountDownTimer(millisInFuture: Long) {
-        countDownTimer?.cancel()
-        countDownTimer = object : CountDownTimer(millisInFuture, 1000L) {
-            override fun onTick(millisUntilFinished: Long) {
-                val secondsLeft = (millisUntilFinished / 1000).toInt()
-                gameViewModel.updateTime(secondsLeft)
-                tvTimer.text = "$secondsLeft"
-            }
-
-            override fun onFinish() {
-                stopGame()
-                Toast.makeText(
-                    requireContext(),
-                    "Раунд окончен! Очки: ${gameViewModel.score}",
-                    Toast.LENGTH_LONG
-                ).show()
-                saveScoreToDatabase()
-            }
-        }.start()
-    }
-
-    private fun stopGame() {
-        gameViewModel.stopGame()
-        btnStartStop.text = "Продолжить"
-        gameView.stopGame()
-        countDownTimer?.cancel()
-        // НЕ сбрасываем время
     }
 
     private fun saveScoreToDatabase() {
@@ -183,7 +158,6 @@ class GameFragment : Fragment() {
         val bestRecordDao = database.bestRecordDao()
 
         CoroutineScope(Dispatchers.IO).launch {
-            // 1. Всегда сохраняем в историю
             playerScoreDao.insert(
                 PlayerScore(
                     nickname = nickname,
@@ -195,7 +169,6 @@ class GameFragment : Fragment() {
                 )
             )
 
-            // 2.  рекорд: обновить, если лучше
             val existing = bestRecordDao.getRecord(nickname, difficulty)
             if (existing == null || score > existing.score) {
                 bestRecordDao.insert(
@@ -215,13 +188,10 @@ class GameFragment : Fragment() {
             }
         }
     }
+
     private fun getCurrentNickname(): String? {
         val prefs = requireContext().getSharedPreferences("user_data", Context.MODE_PRIVATE)
         return prefs.getString("nickname", null)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        countDownTimer?.cancel()
-    }
 }

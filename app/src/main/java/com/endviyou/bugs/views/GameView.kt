@@ -33,7 +33,8 @@ class GameView @JvmOverloads constructor(
 
     // ===== ИГРОВОЙ ЦИКЛ =====
     private val handler = Handler(Looper.getMainLooper())
-    private var isRunning = false
+    var isRunning = false
+        private set
     private var maxBugs = 10
     private var speedMultiplier = 1f
 
@@ -489,18 +490,31 @@ class GameView @JvmOverloads constructor(
 
     fun startGame() {
         if (isRunning) return
+
         isRunning = true
         bugs.clear()
         popups.clear()
-        onScoreChanged?.invoke(score)
 
         bonusVisible = false
         bonusTimer = 0
         gravityModeEnabled = false
         goldenBugTimer = 0
 
-        repeat(maxBugs) { spawnBug() }
-        handler.post(gameLoop)
+        // Если View ещё не имеет размеров — откладываем запуск
+        post {
+            if (width == 0 || height == 0) {
+                android.util.Log.e("GAMEVIEW", "width/height = 0")
+                isRunning = false
+                return@post
+            }
+
+            repeat(maxBugs) { spawnBug() }
+            android.util.Log.d("GAMEVIEW", "Спавнено жуков: ${bugs.size}")
+
+            handler.removeCallbacks(gameLoop)
+            handler.post(gameLoop)
+            invalidate()
+        }
     }
 
     /**
